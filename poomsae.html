@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía Taekwondo - Poomsae</title>
+    <title>Guía Taekwondo - Poomsae por Cinturón</title> <!-- TÍTULO ESPECÍFICO -->
     <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +21,12 @@
 
     <h1>Guía Completa de Taekwondo</h1>
 
-    <!-- Barra de Navegación -->
+    <!-- Barra de Navegación ACTUALIZADA -->
     <nav>
-        <a href="index.html" class="active">Poomsae</a> <!-- Clase activa aquí -->
+        <a href="index.html">Inicio</a> <!-- Enlace a la nueva portada -->
+        <a href="poomsae.html" class="active">Poomsae</a> <!-- Clase activa aquí y apunta a sí mismo -->
         <a href="caidas.html">Caídas</a>
-        <a href="posiciones.html">Posiciones sogui</a>
+        <a href="posiciones.html">Posiciones (Sogui)</a> <!-- Texto actualizado aquí -->
         <a href="defensa.html">Defensa Personal</a>
         <a href="samboderian.html">Samboderian</a>
         <a href="kicho.html">Kicho</a>
@@ -33,9 +34,12 @@
     </nav>
 
     <!-- Contenedor para mostrar el vídeo (Modal) -->
+    <!-- Incluido porque esta página tiene botones de vídeo -->
     <div id="video-player-container" class="hidden">
         <button id="close-video">X</button>
-        <div id="video-player"></div>
+        <div id="video-player">
+            <!-- El iframe de YouTube se insertará aquí por JavaScript -->
+        </div>
     </div>
 
     <!-- Contenedor principal para el contenido -->
@@ -43,6 +47,7 @@
 
         <!-- =============================== -->
         <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Poomsae) === -->
+        <!-- Este es el contenido que estaba originalmente en index.html -->
 
         <section class="belt-group"> <!-- Contenedor principal para la sección Poomsae -->
             <h2>Poomsae por Cinturón</h2>
@@ -65,7 +70,7 @@
                 <h3>Cinturón Amarillo</h3>
                 <h4>WTF (World Taekwondo)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="FSB8m0zdAEo">Taeguk I Chang</button></li>
+                    <li><button class="video-trigger" data-video-id="FSB8m0zdAEo">Taeguk I Chang</button></li> <!-- Corregido a Taeguk I Chang si el anterior era Il Chang -->
                 </ul>
                 <h4>ITF (International Taekwon-Do Federation)</h4>
                 <ul>
@@ -125,7 +130,7 @@
             </div>
 
             <!-- Cinturón Negro -->
-            <div class="belt-group belt-black"> <!-- NUEVA SECCIÓN -->
+            <div class="belt-group belt-black">
                 <h3>Cinturón Negro</h3>
                 <h4>WTF (World Taekwondo)</h4>
                 <ul>
@@ -133,12 +138,8 @@
                     <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_KEUMGANG">Keumgang</button></li>
                     <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_TAEBAEK">Taebaek</button></li>
                     <!-- Puedes añadir más poomsae de cinturón negro aquí -->
-                    <!-- <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_PYONGWON">Pyongwon</button></li> -->
-                    <!-- <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_SIPJIN">Sipjin</button></li> -->
-                    <!-- ... etc -->
                     <!-- Recuerda reemplazar ID_VIDEO_... con los IDs reales -->
                 </ul>
-                <!-- Podrías añadir una sección ITF aquí si tuvieras esos poomsae -->
             </div>
 
         </section> <!-- Fin de sección Poomsae -->
@@ -149,6 +150,7 @@
     </div> <!-- Fin de belt-container -->
 
     <!-- Link JavaScript -->
+    <!-- Incluido porque esta página tiene botones de vídeo -->
     <script src="js/script.js"></script>
 </body>
 </html>
