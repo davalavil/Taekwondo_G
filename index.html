@@ -3,75 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía Completa de Taekwondo</title>
+    <title>Guía Taekwondo - Poomsae</title> <!-- TÍTULO ESPECÍFICO -->
     <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Asegúrate que la ruta a tu archivo CSS es correcta -->
+    <!-- Link CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Simple Nav Styling (Inline or move to CSS) -->
-    <style>
-        /* Puedes mover estos estilos a style.css si prefieres */
-        nav { background-color: #343a40; padding: 12px 0; text-align: center; margin-bottom: 40px; position: sticky; top: 0; z-index: 900; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav a { color: #f8f9fa; margin: 0 12px; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 5px; transition: background-color 0.2s ease, color 0.2s ease; font-size: 0.9em; display: inline-block; }
-        nav a:hover, nav a:focus { background-color: #495057; color: #ffffff; outline: none; }
-        /* Add smooth scrolling */
-        html { scroll-behavior: smooth; }
-        /* Offset for sticky nav */
-        section[id] { scroll-margin-top: 80px; /* Ajusta según altura de nav */ }
-
-        /* Responsive Nav Styles */
-         @media (max-width: 767px) {
-            nav { padding: 10px 0; margin-bottom: 30px; position: static; /* Or keep sticky */ }
-            nav a { margin: 5px 8px; font-size: 0.85em; }
-            section[id] { scroll-margin-top: 10px; /* Adjust if nav is not sticky */ }
-         }
-         @media (max-width: 575px) {
-            nav a { display: block; margin: 8px auto; width: 80%; }
-            section[id] { scroll-margin-top: 10px; }
-         }
-    </style>
 </head>
 <body>
 
     <h1>Guía Completa de Taekwondo</h1>
 
-    <!-- Navigation Menu -->
+    <!-- Barra de Navegación -->
     <nav>
-        <a href="#poomsae">Poomsae</a>
-        <a href="#caidas">Caídas</a>
-        <a href="#posiciones">Posiciones</a>
-        <a href="#defensa">Defensa Personal</a>
-        <a href="#samboderian">Samboderian</a>
-        <a href="#kicho">Kicho</a>
-        <a href="#glosario">Glosario</a>
+        <a href="index.html" class="active">Poomsae</a> <!-- Clase activa aquí -->
+        <a href="caidas.html">Caídas</a>
+        <a href="posiciones.html">Posiciones</a>
+        <a href="defensa.html">Defensa Personal</a>
+        <a href="samboderian.html">Samboderian</a>
+        <a href="kicho.html">Kicho</a>
+        <a href="glosario.html">Glosario</a>
     </nav>
 
     <!-- Contenedor para mostrar el vídeo (Modal) -->
+    <!-- Incluido porque esta página tiene botones de vídeo -->
     <div id="video-player-container" class="hidden">
-        <button id="close-video">X</button> <!-- Texto cambiado a solo X -->
+        <button id="close-video">X</button>
         <div id="video-player">
             <!-- El iframe de YouTube se insertará aquí por JavaScript -->
         </div>
     </div>
 
-    <!-- Contenedor principal para todo el contenido -->
+    <!-- Contenedor principal para el contenido -->
     <div class="belt-container">
 
-        <!-- SECCIÓN POOMSAE -->
-        <section id="poomsae" class="belt-group"> <!-- ID para navegación y estilo base -->
-            <h2>Poomsae por Cinturón</h2> <!-- Título general de la sección -->
+        <!-- =============================== -->
+        <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Poomsae) === -->
+
+        <section class="belt-group"> <!-- Contenedor principal para la sección Poomsae -->
+            <h2>Poomsae por Cinturón</h2> <!-- Título de la sección -->
+
             <!-- Cinturón Blanco -->
-            <div class="belt-group belt-white"> <!-- Grupo específico para el cinturón -->
+            <div class="belt-group belt-white"> <!-- Se anidan belt-group para mantener estilo -->
                 <h3>Cinturón Blanco</h3>
                 <h4>WTF (World Taekwondo)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="9Pd7dvz1mtQ">Taeguk Il Chang</button></li> <!-- Pag 3 -->
+                    <li><button class="video-trigger" data-video-id="9Pd7dvz1mtQ">Taeguk Il Chang</button></li>
                 </ul>
                 <h4>ITF (International Taekwon-Do Federation)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="d082oCqYWKU">Sanchi Han</button></li> <!-- Pag 4 -->
+                    <li><button class="video-trigger" data-video-id="d082oCqYWKU">Sanchi Han</button></li>
                 </ul>
             </div>
 
@@ -80,13 +62,13 @@
                 <h3>Cinturón Amarillo</h3>
                 <h4>WTF (World Taekwondo)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="FSB8m0zdAEo">Taeguk I Chang</button></li> <!-- Pag 5 -->
+                    <li><button class="video-trigger" data-video-id="FSB8m0zdAEo">Taeguk I Chang</button></li>
                 </ul>
                 <h4>ITF (International Taekwon-Do Federation)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="gFhZbe-lXEQ">Dan-Gun Yang</button></li> <!-- Pag 6 -->
+                    <li><button class="video-trigger" data-video-id="gFhZbe-lXEQ">Dan-Gun Yang</button></li>
                 </ul>
-                <!-- Kicho / Samboderian movidos a sus secciones -->
+                <!-- Kicho / Samboderian están en sus propias páginas -->
             </div>
 
             <!-- Cinturón Naranja -->
@@ -94,13 +76,12 @@
                 <h3>Cinturón Naranja</h3>
                 <h4>WTF (World Taekwondo)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="syTX0igty04">Taeguk Sam Chang</button></li> <!-- Pag 7 -->
+                    <li><button class="video-trigger" data-video-id="syTX0igty04">Taeguk Sam Chang</button></li>
                 </ul>
                 <h4>ITF (International Taekwon-Do Federation)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="ZymHffK60Lg">Do-San Yang</button></li> <!-- Pag 8 -->
+                    <li><button class="video-trigger" data-video-id="ZymHffK60Lg">Do-San Yang</button></li>
                 </ul>
-                 <!-- Samboderian movido -->
             </div>
 
             <!-- Cinturón Verde -->
@@ -108,13 +89,12 @@
                 <h3>Cinturón Verde</h3>
                 <h4>WTF (World Taekwondo)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="ASUa6pRm2bs">Taeguk Sa Chang</button></li> <!-- Pag 9 -->
+                    <li><button class="video-trigger" data-video-id="ASUa6pRm2bs">Taeguk Sa Chang</button></li>
                 </ul>
                 <h4>ITF (International Taekwon-Do Federation)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="lfy3rT86OpI">Won-Hyo Yang</button></li> <!-- Pag 10 -->
+                    <li><button class="video-trigger" data-video-id="lfy3rT86OpI">Won-Hyo Yang</button></li>
                 </ul>
-                 <!-- Kicho / Samboderian movidos -->
             </div>
 
             <!-- Cinturón Azul -->
@@ -122,14 +102,13 @@
                 <h3>Cinturón Azul</h3>
                 <h4>WTF (World Taekwondo)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="7rnuN_CBn0I">Taeguk Oh Chang</button></li> <!-- Pag 12 -->
-                    <li><button class="video-trigger" data-video-id="GrC2oVYwUM8">Taeguk Yuk Chang</button></li> <!-- Pag 13 -->
+                    <li><button class="video-trigger" data-video-id="7rnuN_CBn0I">Taeguk Oh Chang</button></li>
+                    <li><button class="video-trigger" data-video-id="GrC2oVYwUM8">Taeguk Yuk Chang</button></li>
                 </ul>
                 <h4>ITF (International Taekwon-Do Federation)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="I-GhxuaVAh0">Yul-Gok Gup</button></li> <!-- Pag 14 -->
+                    <li><button class="video-trigger" data-video-id="I-GhxuaVAh0">Yul-Gok Gup</button></li>
                 </ul>
-                <!-- Samboderian movido -->
             </div>
 
             <!-- Cinturón Rojo -->
@@ -137,237 +116,28 @@
                 <h3>Cinturón Rojo</h3>
                 <h4>WTF (World Taekwondo)</h4>
                 <ul>
-                    <li><button class="video-trigger" data-video-id="VXvkQjdUUto">Taeguk Chil Chang</button></li> <!-- Pag 15 -->
-                    <li><button class="video-trigger" data-video-id="vGWkdK7m3kY">Taeguk Pal Chang</button></li> <!-- Pag 17 -->
+                    <li><button class="video-trigger" data-video-id="VXvkQjdUUto">Taeguk Chil Chang</button></li>
+                    <li><button class="video-trigger" data-video-id="vGWkdK7m3kY">Taeguk Pal Chang</button></li>
                 </ul>
-                <!-- Kicho / Samboderian movidos -->
-                 <!-- Sección ITF comentada sigue comentada -->
+                <!-- Sección ITF comentada sigue comentada -->
+                <!--
+                <h4>ITF (International Taekwon-Do Federation)</h4>
+                <ul>
+                     <li><button class="video-trigger" data-video-id="ID_VIDEO_JOONG_GUN">Joong-Gun</button></li>
+                     <li><button class="video-trigger" data-video-id="ID_VIDEO_TOI_GYE">Toi-Gye</button></li>
+                     <li><button class="video-trigger" data-video-id="ID_VIDEO_HWA_RANG">Hwa-Rang</button></li>
+                </ul>
+                 -->
             </div>
         </section> <!-- Fin de sección Poomsae -->
 
-        <!-- SECCIÓN CAÍDAS -->
-        <section id="caidas" class="belt-group"> <!-- ID para nav, clase para estilo -->
-            <h2>Caídas</h2> <!-- Título (Cambiado a H2 para coherencia) --> <!-- Pag 19 -->
-            <ul>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL">1. Lateral</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_IZQ">2. Voltereta pie izquierdo recogido</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_ESPALDA">3. Caer de espalda (golpe al suelo)</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_SALTO_DELANTE">4. Saltar para delante</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_SUPERMAN">5. Tirarte Superman</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_ESTIRADOS">6. Voltereta dos pies estirados</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_ATRAS">7. Correr de espaldas, hacer voltereta para detrás y caer de espaldas (golpear)</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL_PIES_DELANTE">8. Lateral con los pies por delante y sin adelantar la mano</button></li>
-            </ul>
-        </section>
-
-        <!-- SECCIÓN POSICIONES DE PIE -->
-        <section id="posiciones" class="belt-group"> <!-- ID para nav -->
-            <h2>Posiciones de Pie (Sogui)</h2> <!-- Título (Cambiado a H2) --> <!-- Pag 20 -->
-             <ul>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_AP_SOGUI">1. Ap sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_AP_KUBI_SOGUI">2. Ap kubi sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_TUIT_KUBI_SOGUI">3. Tuit kubi sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_CHUCHUM_SOGUI">4. Chuchum sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_AP_CHUCHUM_SOGUI">5. Ap chuchum sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_AT_CHUCHUM_SOGUI">6. At chuchum sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_TUIT_KOA_SOGUI">7. Tuit koa sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_AP_KOA_SOGUI">8. Ap koa sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_JAKDARI_SOGUI">9. Jakdari sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_MOA_SOGUI">10. Moa sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_CHARYOT_SOGUI">11. Charyot sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_NARANGUI_SOGUI">12. Narangui sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_PIONGUI_SOGUI">13. Piongui sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_JANCHUM_CHUCHUM_SOGUI">14. Janchum chuchum sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_BOM_SOGUI">15. Bom Sogui</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_OGUN_JAKDARI_SOGUI">16. Ogun jakdari sogui</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_MOA_CHUCHUM_SOGUI">17. Moa chuchum sogui</button></li>
-            </ul>
-        </section>
-
-        <!-- SECCIÓN DEFENSA PERSONAL -->
-        <section id="defensa" class="belt-group"> <!-- ID para nav -->
-            <h2>Defensa Personal</h2> <!-- Título (Cambiado a H2) --> <!-- Pag 21-27 -->
-            <ul>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_1">1. Primera defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_2">2. Segunda defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_3">3. Tercera defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_4">4. Cuarta defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_5">5. Quinta defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_6">6. Sexta defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_7">7. Séptima defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_8">8. Octava defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_9">9. Novena defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_10">10. Décima defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_11">11. Decimoprimera defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_12">12. Decimosegunda defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_13">13. Decimotercera defensa personal</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_14">14. Decimocuarta defensa personal</button></li>
-            </ul>
-        </section>
-
-        <!-- SECCIÓN SAMBODERIAN -->
-        <section id="samboderian" class="belt-group"> <!-- ID para nav -->
-            <h2>Samboderian</h2> <!-- Título (Cambiado a H2) --> <!-- Pag 28-31 -->
-             <!-- Links tomados de las secciones originales de cinturones -->
-            <ul>
-                <li><button class="video-trigger" data-video-id="WvPUpKRMHY8">Samboderian 1</button></li>
-                <li><button class="video-trigger" data-video-id="GIksVE1bUSQ">Samboderian 2</button></li>
-                <li><button class="video-trigger" data-video-id="dj0eNgHrFI4">Samboderian 3</button></li>
-                <li><button class="video-trigger" data-video-id="nWLtUAQEVbo">Samboderian 4</button></li>
-                <li><button class="video-trigger" data-video-id="ZnLAiOKe7do">Samboderian 5</button></li>
-                <li><button class="video-trigger" data-video-id="uQxYJHg8JZ0">Samboderian 6</button></li>
-                 <!-- Añadir más si hay videos para las tablas de pag 28, 29, 30, 31 -->
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBODERIAN_1_TECS">Samboderian 1 (Técnicas)</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBODERIAN_2_TECS">Samboderian 2 (Técnicas)</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBODERIAN_3_PATADAS">Samboderian 3 (Patadas)</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBODERIAN_4_TECS">Samboderian 4 (Técnicas)</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBODERIAN_5_TECS">Samboderian 5 (Técnicas)</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBODERIAN_6_TECS">Samboderian 6 (Técnicas)</button></li>
-            </ul>
-        </section>
-
-        <!-- SECCIÓN KICHO -->
-        <section id="kicho" class="belt-group"> <!-- ID para nav -->
-            <h2>Kicho</h2> <!-- Título (Cambiado a H2) --> <!-- Pag 32-33 -->
-             <!-- Links tomados de las secciones originales de cinturones -->
-            <ul>
-                <li><button class="video-trigger" data-video-id="jk5x0heNWdU">Kicho 1</button></li>
-                <li><button class="video-trigger" data-video-id="DrgmLQKj5OQ">Kicho 2</button></li>
-                <li><button class="video-trigger" data-video-id="Omtp1xKqFr0">Kicho 3</button></li>
-                 <!-- Añadir más si hay videos para las tablas de pag 32, 33 -->
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_KICHO_1_TECS">Kicho 1 (Técnicas)</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_KICHO_2_TECS">Kicho 2 (Técnicas)</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_KICHO_3_TECS">Kicho 3 (Técnicas)</button></li>
-            </ul>
-        </section>
-
-        <!-- SECCIÓN GLOSARIO -->
-        <section id="glosario" class="belt-group glossary"> <!-- ID para nav y clase específica -->
-            <h2>Glosario</h2> <!-- Título (Cambiado a H2) --> <!-- Pag 34-37 -->
-
-            <h4>ESENCIALES</h4>
-            <dl>
-                <dt>TAEKWONDO</dt><dd>"el camino del pie y el puño", TAE: pie; KWON: puño; y DO: camino entendido como desarrollo personal</dd>
-                <dt>PUMSE</dt><dd>Ideograma de movimientos técnicos. Simulan ataques y defensas contra uno o varios atacantes imaginarios.</dd>
-                <dt>DOBOK</dt><dd>Traje de Taekwondo.</dd>
-                <dt>TI</dt><dd>Cinturón.</dd>
-                <dt>DOJANG</dt><dd>Sitio espiritual donde se practican artes marciales.</dd>
-                <dt>KIAP</dt><dd>Grito de liberación de nuestra energía.</dd>
-            </dl>
-
-            <h4>ÓRDENES</h4>
-            <dl>
-                <dt>CHARYOT</dt><dd>Posición de firmes. Posición de saludo</dd>
-                <dt>CHUMBI</dt><dd>Posición preparatoria, para técnica o combate.</dd>
-                <dt>SABOMNIM</dt><dd>Maestro.</dd>
-                <dt>KIONÑE</dt><dd>Saludo, leve inclinación de tronco y cabeza.</dd>
-                <dt>SABOMNIM QUE KIONÑE</dt><dd>Saludo al maestro</dd>
-                <dt>KUKI CHUMOK</dt><dd>Mano en el pecho, baro para volver a posición inicial.</dd>
-                <dt>SICHAK</dt><dd>Comenzar.</dd>
-                <dt>KALYO</dt><dd>Separarse.</dd>
-                <dt>KESOK</dt><dd>Continuar.</dd>
-                <dt>KUMAN/GUMAN</dt><dd>Terminar.</dd>
-            </dl>
-
-            <h4>DIRECCIONES</h4>
-             <dl>
-                <dt>AP</dt><dd>Al frente</dd>
-                <dt>TUIT</dt><dd>Hacia atrás</dd>
-                <dt>YOP</dt><dd>Lateral</dd>
-                <dt>AN</dt><dd>Hacia el Interior</dd>
-                <dt>BAKAT</dt><dd>Hacia el Exterior</dd>
-                <dt>UEN</dt><dd>Izquierda</dd>
-                <dt>ORUN</dt><dd>Derecha</dd>
-                <dt>BARO</dt><dd>Lado contrario</dd>
-                <dt>BANDE</dt><dd>Mismo lado</dd>
-                <dt>NERYO</dt><dd>Hacia abajo</dd>
-                <dt>OLLYO</dt><dd>Hacia arriba</dd>
-                <dt>MONDOLLYO</dt><dd>Giro</dd>
-                <dt>FURIO</dt><dd>Círculo del interior al exterior.</dd>
-                <dt>DOLLYO</dt><dd>Circular</dd>
-             </dl>
-
-             <h4>TECNICAS Y ZONAS</h4>
-             <dl>
-                 <dt>GONGKIOK</dt><dd>Ataque</dd>
-                 <dt>MAKI</dt><dd>Defensa</dd>
-                 <dt>CHAGUI</dt><dd>Técnica de pierna (Patada).</dd>
-                 <dt>CHIGUI</dt><dd>Técnica de ataque, golpear (no puño recto).</dd>
-                 <dt>JIRUGUI</dt><dd>Ataque con el puño (recto).</dd>
-                 <dt>SOGUI</dt><dd>Técnica de posición</dd>
-                 <dt>OLGUL</dt><dd>Zona Alta (cabeza).</dd>
-                 <dt>MONTONG</dt><dd>Zona Media (tronco).</dd>
-                 <dt>ARE</dt><dd>Zona Baja (bajo cintura).</dd>
-                 <dt>NULO</dt><dd>Hacia abajo (Presionar)</dd>
-                 <dt>BANDAL</dt><dd>Media luna</dd>
-                 <dt>DUBON</dt><dd>Doble</dd>
-                 <dt>SEBON</dt><dd>Triple</dd>
-                 <dt>GODURO</dt><dd>Una mano ayuda a la otra (Refuerzo).</dd>
-                 <dt>TUIO</dt><dd>Técnica de Salto</dd>
-                 <dt>GECHO</dt><dd>Lo que hace una mano hace la otra.</dd>
-                 <dt>OKGORO</dt><dd>Manos en cruz</dd>
-                 <dt>PIOCHOK</dt><dd>Acercar / Objetivo</dd>
-                 <dt>DANGKIO</dt><dd>Agarrar / Tirar</dd>
-             </dl>
-
-             <h4>COMBATE</h4>
-             <dl>
-                 <dt>KIORUGUI</dt><dd>Combate, competición.</dd>
-                 <dt>CHONG</dt><dd>Azul, competidor peto azul.</dd>
-                 <dt>HONG</dt><dd>Rojo, competidor peto rojo.</dd>
-                 <dt>KIORUGUI CHUMBI</dt><dd>Posición de combate.</dd>
-                 <dt>KAMCHOM JANA</dt><dd>1 punto menos (Penalización).</dd>
-                 <dt>KIONG GO JANA</dt><dd>0,5 puntos menos (Aviso).</dd>
-                 <dt>SUNG</dt><dd>Vencedor.</dd>
-                 <dt>CHONG SUNG</dt><dd>Vencedor peto azul</dd>
-                 <dt>HONG SUNG</dt><dd>Vencedor peto Rojo</dd>
-                 <dt>SIGAN</dt><dd>Tiempo</dd>
-             </dl>
-
-             <h4>PARTES DEL CUERPO</h4>
-             <dl>
-                 <dt>MORI</dt><dd>Cabeza</dd>
-                 <dt>MOK</dt><dd>Cuello</dd>
-                 <dt>TOK</dt><dd>Mentón</dd>
-                 <dt>PAL</dt><dd>Brazo</dd>
-                 <dt>PALKUP</dt><dd>Codo</dd>
-                 <dt>PALMOK</dt><dd>Antebrazo</dd>
-                 <dt>CHUMOK</dt><dd>Puño</dd>
-                 <dt>AKUNG SON</dt><dd>Mano forma de herradura</dd>
-                 <dt>DUNG CHUMOK</dt><dd>Parte superior de los nudillos</dd>
-                 <dt>ME CHUMOK</dt><dd>Canto del puño</dd>
-                 <dt>BAM CHUMOK</dt><dd>Puño como una castaña, dedo corazón adelantado</dd>
-                 <dt>SON</dt><dd>Mano</dd>
-                 <dt>SONNAL</dt><dd>Canto exterior de la mano</dd>
-                 <dt>SONNAL DUNG</dt><dd>Canto interior de la mano</dd>
-                 <dt>BATANG SON</dt><dd>Palma de la mano</dd>
-                 <dt>SON KUT</dt><dd>Punta de los dedos de la mano</dd>
-                 <dt>DARI</dt><dd>Pierna</dd>
-                 <dt>MURUP</dt><dd>Rodilla</dd>
-                 <dt>BAL</dt><dd>Pie</dd>
-                 <dt>AP CHUK</dt><dd>Metatarso del pie</dd>
-                 <dt>TUIT CHUK</dt><dd>Base del talón</dd>
-                 <dt>BAL NAL</dt><dd>Borde exterior del pie</dd>
-                 <dt>BAL NAL DUNG</dt><dd>Arco interno del pie</dd>
-                 <dt>BAL BA DAK</dt><dd>Planta del pie</dd>
-                 <dt>BAL DUNG</dt><dd>Empeine</dd>
-                 <!-- Añadir más términos si es necesario -->
-             </dl>
-
-             <h4>NÚMEROS EN KOREANO</h4>
-             <p>1: JANA, 2: DUL, 3: SET, 4: NET, 5: DASOT, 6: YOSOT, 7: ILGOP, 8: YODOL, 9: AJOP, 10: YOL</p>
-
-             <h4>ORDINALES EN KOREANO</h4>
-              <p>1º: IL, 2º: I, 3º: SAM, 4º: SA, 5º: OH, 6º: YOUK, 7º: CHIL, 8º: PAL, 9º: GUK, 10º: SIB</p>
-
-            <!-- Se podría añadir aquí un enlace rápido a la sección de Posiciones -->
-            <!-- <p><a href="#posiciones">Ver sección Posiciones</a></p> -->
-
-        </section>
+        <!-- === FIN CONTENIDO ESPECÍFICO === -->
+        <!-- =============================== -->
 
     </div> <!-- Fin de belt-container -->
 
-    <!-- Asegúrate que la ruta a tu archivo JavaScript es correcta -->
+    <!-- Link JavaScript -->
+    <!-- Incluido porque esta página tiene botones de vídeo -->
     <script src="js/script.js"></script>
 </body>
 </html>
