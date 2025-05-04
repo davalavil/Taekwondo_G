@@ -13,19 +13,22 @@
 </head>
 <body>
 
-    <h1>Guía Completa de Taekwondo</h1>
-
-    <!-- Barra de Navegación ACTUALIZADA -->
+    <!-- Barra de Navegación -->
     <nav>
-        <a href="index.html">Inicio</a> <!-- NUEVO enlace a la portada -->
-        <a href="poomsae.html">Poomsae</a> <!-- Apunta a poomsae.html -->
-        <a href="caidas.html" class="active">Caídas</a> <!-- Clase activa aquí -->
+        <a href="index.html">Inicio</a>
+        <a href="poomsae.html">Poomsae</a>
+        <a href="caidas.html" class="active">Caídas</a>
         <a href="posiciones.html">Posiciones (Sogui)</a>
         <a href="defensa.html">Defensa Personal</a>
         <a href="samboderian.html">Samboderian</a>
         <a href="kicho.html">Kicho</a>
         <a href="glosario.html">Glosario</a>
     </nav>
+
+    <!-- NUEVO BANNER CON IMAGEN DE FONDO -->
+    <div class="page-banner banner-caidas"> <!-- Clase específica -->
+        <h2>Caídas</h2> <!-- Título -->
+    </div>
 
     <!-- Contenedor para mostrar el vídeo (Modal) -->
     <div id="video-player-container" class="hidden">
@@ -35,7 +38,6 @@
 
     <!-- Contenedor principal para el contenido -->
     <div class="belt-container">
-
         <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Caídas por Cinturón) === -->
         <!-- Cinturón Blanco -->
         <div class="belt-group belt-white">
@@ -106,13 +108,10 @@
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_ESTIRADOS">6. Voltereta dos pies estirados</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_ATRAS">7. Correr de espaldas, hacer voltereta para detrás y caer de espaldas (golpear)</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL_PIES_DELANTE">8. Lateral con los pies por delante y sin adelantar la mano</button></li>
-                 <!-- Recuerda reemplazar ID_VIDEO_... con los IDs reales -->
             </ul>
         </div>
         <!-- === FIN CONTENIDO ESPECÍFICO === -->
-
     </div> <!-- Fin de belt-container -->
-
     <!-- Link JavaScript -->
     <script src="js/script.js"></script>
 </body>
