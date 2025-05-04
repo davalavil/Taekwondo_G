@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía Taekwondo - Samboderian por Cinturón</title> <!-- TÍTULO ACTUALIZADO -->
+    <title>Guía Taekwondo - Samboderian por Cinturón</title>
     <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,12 @@
 
     <h1>Guía Completa de Taekwondo</h1>
 
-    <!-- Barra de Navegación -->
+    <!-- Barra de Navegación ACTUALIZADA -->
     <nav>
-        <a href="index.html">Poomsae</a>
+        <a href="index.html">Inicio</a> <!-- NUEVO enlace a la portada -->
+        <a href="poomsae.html">Poomsae</a> <!-- Apunta a poomsae.html -->
         <a href="caidas.html">Caídas</a>
-        <a href="posiciones.html">Posiciones sogui</a>
+        <a href="posiciones.html">Posiciones (Sogui)</a>
         <a href="defensa.html">Defensa Personal</a>
         <a href="samboderian.html" class="active">Samboderian</a> <!-- Clase activa aquí -->
         <a href="kicho.html">Kicho</a>
@@ -27,12 +28,9 @@
     </nav>
 
     <!-- Contenedor para mostrar el vídeo (Modal) -->
-    <!-- Incluido porque esta página tiene botones de vídeo -->
     <div id="video-player-container" class="hidden">
         <button id="close-video">X</button>
-        <div id="video-player">
-            <!-- El iframe de YouTube se insertará aquí por JavaScript -->
-        </div>
+        <div id="video-player"></div>
     </div>
 
     <!-- Contenedor principal para el contenido -->
@@ -41,12 +39,9 @@
         <!-- =============================== -->
         <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Samboderian por Cinturón) === -->
 
-        <!-- No hay Samboderian para Blanco -->
-
         <!-- Cinturón Amarillo -->
         <div class="belt-group belt-yellow">
             <h3>Cinturón Amarillo</h3>
-             <!-- Podrías añadir un h4 si quieres: <h4>Samboderian</h4> -->
             <ul>
                 <li><button class="video-trigger" data-video-id="WvPUpKRMHY8">Samboderian 1</button></li>
                 <li><button class="video-trigger" data-video-id="GIksVE1bUSQ">Samboderian 2</button></li>
@@ -56,7 +51,6 @@
         <!-- Cinturón Naranja -->
         <div class="belt-group belt-orange">
             <h3>Cinturón Naranja</h3>
-             <!-- <h4>Samboderian</h4> -->
             <ul>
                 <li><button class="video-trigger" data-video-id="dj0eNgHrFI4">Samboderian 3</button></li>
             </ul>
@@ -65,7 +59,6 @@
         <!-- Cinturón Verde -->
         <div class="belt-group belt-green">
             <h3>Cinturón Verde</h3>
-             <!-- <h4>Samboderian</h4> -->
             <ul>
                 <li><button class="video-trigger" data-video-id="nWLtUAQEVbo">Samboderian 4</button></li>
             </ul>
@@ -74,7 +67,6 @@
         <!-- Cinturón Azul -->
         <div class="belt-group belt-blue">
             <h3>Cinturón Azul</h3>
-             <!-- <h4>Samboderian</h4> -->
             <ul>
                 <li><button class="video-trigger" data-video-id="ZnLAiOKe7do">Samboderian 5</button></li>
             </ul>
@@ -83,7 +75,6 @@
         <!-- Cinturón Rojo -->
         <div class="belt-group belt-red">
             <h3>Cinturón Rojo</h3>
-            <!-- <h4>Samboderian</h4> -->
             <ul>
                 <li><button class="video-trigger" data-video-id="uQxYJHg8JZ0">Samboderian 6</button></li>
             </ul>
@@ -95,7 +86,6 @@
     </div> <!-- Fin de belt-container -->
 
     <!-- Link JavaScript -->
-    <!-- Incluido porque esta página tiene botones de vídeo -->
     <script src="js/script.js"></script>
 </body>
 </html>
