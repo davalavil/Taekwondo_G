@@ -12,7 +12,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Fondo por defecto para páginas internas */
     color: #495057;
     line-height: 1.7;
     font-weight: 400;
@@ -22,14 +22,14 @@ body {
 
 h1 {
     text-align: center;
-    color: #212529;
+    color: #212529; /* Color por defecto para H1 en páginas internas */
     margin-top: 40px;
     margin-bottom: 30px;
     font-weight: 700;
     font-size: 2.2em;
 }
 
-/* === NAVIGATION STYLES (Para páginas de contenido) === */
+/* === NAVIGATION STYLES (Para páginas de contenido, no en la portada) === */
 nav {
     background-color: #343a40;
     padding: 12px 0;
@@ -63,74 +63,153 @@ nav a.active {
     cursor: default;
 }
 
-/* === DASHBOARD STYLES (Para index.html) === */
-.dashboard-container {
-    max-width: 1100px; /* Ancho máximo para el dashboard */
-    margin: 40px auto; /* Margen superior/inferior y centrado */
-    padding: 0 20px;
+/* === DASHBOARD STYLES (PORTADA - index.html) === */
+
+/* Fondo oscuro y estilo base para la página de inicio */
+body.home-page {
+    background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460); /* Gradiente oscuro azulado */
+    color: #e0e0e0; /* Color de texto claro por defecto */
+    line-height: 1.6;
 }
 
+/* Contenedor del fondo (ocupa toda la pantalla) */
+.hero-background {
+    min-height: 100vh; /* Asegura que ocupa al menos toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 40px 20px;
+    box-sizing: border-box;
+    /* Opcional: Añadir una imagen de fondo tipo collage */
+    /* background-image: linear-gradient(rgba(15, 52, 96, 0.85), rgba(22, 33, 62, 0.9)), url('../path/to/your/tkd-collage.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-attachment: fixed; /* Efecto parallax sutil */
+}
+
+/* Contenedor del contenido dentro del fondo */
+.hero-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo del título principal en la portada */
+.home-page h1 {
+    color: #ffffff; /* Blanco para el título */
+    font-size: 2.8em; /* Más grande */
+    margin-bottom: 15px; /* Menos espacio */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del subtítulo */
+.subtitle {
+    color: rgba(255, 255, 255, 0.8); /* Blanco semi-transparente */
+    font-size: 1.1em;
+    margin-bottom: 40px; /* Espacio antes de las tarjetas */
+    font-weight: 300;
+}
+
+/* Grid para las tarjetas del dashboard */
 .dashboard-grid {
     display: grid;
-    /* Ajusta el número de columnas según prefieras */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
-    gap: 25px; /* Espacio entre tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Columnas responsivas */
+    gap: 30px; /* Espacio entre tarjetas */
+    width: 100%;
 }
 
+/* Estilo base de cada tarjeta del dashboard */
 .dashboard-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 25px 30px;
-    text-decoration: none; /* Quitar subrayado del enlace */
-    color: #495057; /* Color de texto base para la tarjeta */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo muy sutil o usar imágenes */
+    border-radius: 15px;
+    text-decoration: none;
+    color: #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     display: flex;
-    flex-direction: column; /* Apilar título y descripción */
-    justify-content: center; /* Centrar contenido verticalmente */
-    min-height: 150px; /* Altura mínima para consistencia */
-    border-left: 8px solid transparent; /* Espacio para color de acento */
-    overflow: hidden; /* Para efectos sutiles si se añaden */
+    align-items: flex-end; /* Alinea el contenido abajo */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    min-height: 220px; /* Altura de las tarjetas */
+    overflow: hidden;
+    position: relative; /* Para superponer contenido */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    background-size: cover; /* Para las imágenes de fondo opcionales */
+    background-position: center; /* Para las imágenes de fondo opcionales */
+}
+
+/* Contenedor del texto dentro de la tarjeta */
+.card-content {
+    position: relative; /* Asegura que está sobre el pseudo-elemento :before */
+    z-index: 2;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Pseudo-elemento para el degradado oscuro en la base (si se usan imágenes) */
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; /* Altura del degradado */
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 10%, rgba(15, 23, 42, 0) 100%); /* Ajusta colores */
+    z-index: 1;
+    opacity: 0.8; /* Ajusta opacidad del degradado */
+    transition: opacity 0.3s ease;
 }
 
 .dashboard-card:hover {
-    transform: translateY(-5px); /* Efecto levantar al pasar el ratón */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px) scale(1.02); /* Efecto más pronunciado */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1); /* Cambio sutil al pasar el ratón */
+}
+.dashboard-card:hover::before {
+    opacity: 1; /* Intensifica el degradado al pasar el ratón */
 }
 
+/* Título dentro de la tarjeta */
 .dashboard-card .card-title {
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: 600;
-    color: #212529;
-    margin-top: 0;
-    margin-bottom: 8px;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Descripción (oculta) */
 .dashboard-card .card-description {
-    font-size: 0.9em;
-    color: #6c757d;
-    line-height: 1.5;
-    margin-bottom: 0;
+   display: none;
 }
 
-/* Colores de acento para las tarjetas del dashboard (en border-left) */
-.card-poomsae { border-left-color: #6c757d; } /* Gris neutro */
-.card-caidas { border-left-color: #0d6efd; } /* Azul */
-.card-posiciones { border-left-color: #198754; } /* Verde */
-.card-defensa { border-left-color: #dc3545; } /* Rojo */
-.card-samboderian { border-left-color: #ffc107; } /* Amarillo */
-.card-kicho { border-left-color: #fd7e14; } /* Naranja */
-.card-glosario { border-left-color: #6f42c1; } /* Púrpura */
+/* --- IMÁGENES DE FONDO O COLORES PARA TARJETAS --- */
+/* Descomenta y ajusta rutas si usas imágenes, o deja los colores */
+
+/* .card-poomsae { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url('../img/poomsae_bg.jpg'); } */
+/* .card-caidas { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url('../img/caidas_bg.jpg'); } */
+/* ... (otras imágenes) ... */
+
+/* Si no usas imágenes, estos colores de fondo se aplicarán */
+ .card-poomsae { background-color: rgba(108, 117, 125, 0.2); }
+ .card-caidas { background-color: rgba(13, 110, 253, 0.2); }
+ .card-posiciones { background-color: rgba(25, 135, 84, 0.2); }
+ .card-defensa { background-color: rgba(220, 53, 69, 0.2); }
+ .card-samboderian { background-color: rgba(255, 193, 7, 0.2); }
+ .card-kicho { background-color: rgba(253, 126, 20, 0.2); }
+ .card-glosario { background-color: rgba(111, 66, 193, 0.2); }
 
 
-/* === CONTENIDO GENERAL (Para páginas internas) === */
+/* === CONTENIDO GENERAL (Para páginas internas: Poomsae, Caidas, etc.) === */
 .belt-container {
     max-width: 850px;
     margin: 0 auto;
     padding: 0 20px;
+    padding-bottom: 40px; /* Añade espacio al final de las páginas internas */
 }
 
-/* Estilo base para cada grupo de contenido (Tarjeta) */
+/* Estilo base para cada grupo de contenido (Tarjeta interna) */
 .belt-group {
     background-color: #ffffff;
     padding: 30px;
@@ -142,12 +221,12 @@ nav a.active {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Borde genérico para secciones sin color específico (contenedor Poomsae, Defensa, Glosario...) */
+/* Borde genérico para secciones internas sin color específico */
 .belt-group:not([class*='belt-']) {
-    border-top-color: #6c757d; /* Gris neutro */
+    border-top-color: #6c757d;
 }
 
-/* Título de cada sección/cinturón */
+/* Título de cada sección/cinturón interno */
 .belt-group h3 {
     color: #212529;
     margin-top: 0;
@@ -156,7 +235,7 @@ nav a.active {
     font-weight: 600;
 }
 
-/* Título principal dentro de una sección (ej. "Poomsae por Cinturón") */
+/* Título principal H2 dentro de una sección interna */
 .belt-group > h2 {
     font-size: 1.8em;
     color: #343a40;
@@ -179,7 +258,6 @@ nav a.active {
     border-bottom: none;
     padding-bottom: 0;
 }
-/* Ajuste para que el primer h4 no tenga tanto margen superior */
 .belt-group h3 + h4 {
     margin-top: 5px;
 }
@@ -194,7 +272,7 @@ nav a.active {
     margin-bottom: 8px;
 }
 
-/* === ESTILOS DE BOTONES DE VÍDEO === */
+/* === ESTILOS DE BOTONES DE VÍDEO (Internos) === */
 .video-trigger {
     background-color: #f1f3f5;
     color: #495057 !important;
@@ -218,7 +296,7 @@ nav a.active {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* === ACENTOS DE COLOR POR CINTURÓN (en border-top) === */
+/* === ACENTOS DE COLOR POR CINTURÓN (Internos) === */
 .belt-white { border-top-color: #dcdcdc; }
 .belt-yellow { border-top-color: #ffeb3b; }
 .belt-orange { border-top-color: #ff9800; }
@@ -341,162 +419,70 @@ nav a.active {
 
 /* Tabletas (ej. iPads, pantallas medianas) */
 @media (max-width: 991px) {
-    h1 {
-        font-size: 2em;
-    }
+    h1 { font-size: 2em; }
+
     /* Dashboard */
-    .dashboard-container {
-        max-width: 90%;
-    }
-    .dashboard-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-    .dashboard-card {
-        padding: 20px 25px;
-    }
-    .dashboard-card .card-title {
-        font-size: 1.3em;
-    }
+    .home-page h1 { font-size: 2.4em; }
+    .subtitle { font-size: 1em; margin-bottom: 30px; }
+    .dashboard-container { max-width: 90%; }
+    .dashboard-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .dashboard-card { padding: 20px 25px; min-height: 200px;}
+    .dashboard-card .card-title { font-size: 1.4em; }
+
     /* Contenido Interno */
-    .belt-container {
-        max-width: 720px;
-    }
-    .belt-group h3, .belt-group > h2 {
-        font-size: 1.5em;
-    }
-    nav a {
-        margin: 0 8px;
-    }
+    .belt-container { max-width: 720px; }
+    .belt-group h3, .belt-group > h2 { font-size: 1.5em; }
+    nav a { margin: 0 8px; }
 }
 
 /* Tabletas pequeñas y móviles grandes en landscape */
 @media (max-width: 767px) {
-    h1 {
-        font-size: 1.9em;
-        margin-top: 30px;
-        margin-bottom: 25px;
-    }
+    h1 { font-size: 1.9em; margin-top: 30px; margin-bottom: 25px; }
+
     /* Dashboard */
-    .dashboard-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Más pequeñas aún */
-        gap: 18px;
-    }
-     .dashboard-card .card-title {
-        font-size: 1.2em;
-    }
-     .dashboard-card .card-description {
-        font-size: 0.85em;
-    }
+    .home-page h1 { font-size: 2em; }
+    .subtitle { font-size: 0.95em; }
+    .dashboard-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+    .dashboard-card .card-title { font-size: 1.3em; }
+    .dashboard-card .card-description { font-size: 0.85em; }
+    .dashboard-card { min-height: 180px; padding: 15px; }
+
 
     /* Contenido Interno */
-    nav {
-        padding: 10px 0;
-        margin-bottom: 30px;
-    }
-    nav a {
-        margin: 5px 6px;
-        font-size: 0.85em;
-        padding: 5px 10px;
-    }
-    .belt-container {
-        padding: 0 15px;
-        max-width: none;
-    }
-    .belt-group {
-        padding: 25px;
-        margin-bottom: 30px;
-        border-top-width: 5px;
-        border-radius: 10px;
-    }
-     .belt-group h3, .belt-group > h2 {
-        font-size: 1.4em;
-        margin-bottom: 20px;
-    }
-    .belt-group h4 {
-        font-size: 0.9em;
-        margin-top: 25px;
-        margin-bottom: 12px;
-    }
-     .video-trigger {
-        padding: 11px 16px;
-        font-size: 0.95em;
-        border-radius: 6px;
-    }
-    #video-player-container {
-        padding: 15px;
-    }
-    #video-player {
-         width: 100%;
-         max-width: none;
-         border-radius: 6px;
-    }
-     #close-video {
-        top: 15px;
-        right: 15px;
-        width: 36px;
-        height: 36px;
-        font-size: 1.3em;
-        line-height: 34px;
-    }
+    nav { padding: 10px 0; margin-bottom: 30px; }
+    nav a { margin: 5px 6px; font-size: 0.85em; padding: 5px 10px; }
+    .belt-container { padding: 0 15px; max-width: none; }
+    .belt-group { padding: 25px; margin-bottom: 30px; border-top-width: 5px; border-radius: 10px; }
+    .belt-group h3, .belt-group > h2 { font-size: 1.4em; margin-bottom: 20px; }
+    .belt-group h4 { font-size: 0.9em; margin-top: 25px; margin-bottom: 12px; }
+    .video-trigger { padding: 11px 16px; font-size: 0.95em; border-radius: 6px; }
+    #video-player-container { padding: 15px; }
+    #video-player { width: 100%; max-width: none; border-radius: 6px; }
+    #close-video { top: 15px; right: 15px; width: 36px; height: 36px; font-size: 1.3em; line-height: 34px; }
 }
 
 /* Móviles (portrait) */
 @media (max-width: 575px) {
-    body {
-        line-height: 1.6;
-    }
-    h1 {
-        font-size: 1.65em;
-        margin-bottom: 20px;
-    }
+    body { line-height: 1.6; }
+    h1 { font-size: 1.65em; margin-bottom: 20px; }
+
     /* Dashboard */
-     .dashboard-grid {
-        grid-template-columns: 1fr; /* Una columna en móviles pequeños */
-        gap: 15px;
-    }
-    .dashboard-card {
-         min-height: 120px;
-         padding: 18px 20px;
-    }
+    .home-page h1 { font-size: 1.8em; }
+    .hero-background { padding-top: 30px; }
+    .dashboard-grid { grid-template-columns: 1fr; gap: 20px; }
+    .dashboard-card { min-height: 160px; }
+    .dashboard-card .card-title { font-size: 1.2em; }
+
 
     /* Contenido Interno */
-    nav a { /* Se aplica a páginas internas */
-        display: block;
-        margin: 8px auto;
-        width: 85%;
-        padding: 8px 12px;
-    }
-    .belt-group {
-        padding: 20px;
-        margin-bottom: 25px;
-        border-radius: 8px;
-    }
-     .belt-group h3, .belt-group > h2 {
-        font-size: 1.3em;
-    }
-    .belt-group h4 {
-        font-size: 0.85em;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    .video-trigger {
-        padding: 10px 15px;
-        font-size: 0.9em;
-    }
-     #video-player-container {
-        padding: 10px;
-    }
-    #close-video {
-        top: 10px;
-        right: 10px;
-        width: 32px;
-        height: 32px;
-        font-size: 1.2em;
-        line-height: 30px;
-    }
-    .glossary dd, .glossary p {
-        font-size: 0.9em;
-        margin-left: 10px;
-    }
+    nav a { display: block; margin: 8px auto; width: 85%; padding: 8px 12px; }
+    .belt-group { padding: 20px; margin-bottom: 25px; border-radius: 8px; }
+    .belt-group h3, .belt-group > h2 { font-size: 1.3em; }
+    .belt-group h4 { font-size: 0.85em; margin-top: 20px; margin-bottom: 10px; }
+    .video-trigger { padding: 10px 15px; font-size: 0.9em; }
+    #video-player-container { padding: 10px; }
+    #close-video { top: 10px; right: 10px; width: 32px; height: 32px; font-size: 1.2em; line-height: 30px; }
+    .glossary dd, .glossary p { font-size: 0.9em; margin-left: 10px; }
 }
+
+/* === FIN ESTILOS === */
