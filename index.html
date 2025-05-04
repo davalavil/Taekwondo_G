@@ -8,68 +8,78 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Link CSS (Incluirá los nuevos estilos del dashboard) -->
+    <!-- Link CSS (Debe incluir los estilos del dashboard añadidos previamente) -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Opcional: Font Awesome para iconos -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
 </head>
-<body>
+<body class="home-page"> <!-- Clase específica para la página de inicio -->
 
-    <!-- Título principal de la aplicación -->
-    <h1>Guía Completa de Taekwondo</h1>
+    <!-- Contenedor principal con fondo -->
+    <div class="hero-background">
+        <!-- Contenido superpuesto -->
+        <div class="hero-content">
+            <h1>Guía Completa de Taekwondo</h1>
+            <p class="subtitle">Explora las diferentes secciones de la aplicación</p>
 
-    <!-- Contenedor Principal del Dashboard -->
-    <div class="dashboard-container">
-        <!-- Grid para las tarjetas del mosaico -->
-        <div class="dashboard-grid">
+             <!-- Grid para las tarjetas del mosaico -->
+            <div class="dashboard-grid">
 
-            <!-- Tarjeta para Poomsae -->
-            <a href="poomsae.html" class="dashboard-card card-poomsae">
-                <!-- Icono Opcional: Puedes usar una librería como FontAwesome o SVGs -->
-                <!-- <div class="card-icon"><i class="fas fa-wind"></i></div> -->
-                <h2 class="card-title">Poomsae</h2>
-                <p class="card-description">Formas y patrones por cinturón.</p>
-            </a>
+                <!-- Tarjeta para Poomsae -->
+                <a href="poomsae.html" class="dashboard-card card-poomsae"> <!-- Enlace a poomsae.html -->
+                    <div class="card-content">
+                        <h2 class="card-title">Poomsae</h2>
+                        <!-- <p class="card-description">Formas por cinturón.</p> -->
+                    </div>
+                </a>
 
-            <!-- Tarjeta para Caídas -->
-            <a href="caidas.html" class="dashboard-card card-caidas">
-                <h2 class="card-title">Caídas</h2>
-                <p class="card-description">Técnicas para caer con seguridad.</p>
-            </a>
+                <!-- Tarjeta para Caídas -->
+                <a href="caidas.html" class="dashboard-card card-caidas">
+                     <div class="card-content">
+                        <h2 class="card-title">Caídas</h2>
+                    </div>
+                </a>
 
-            <!-- Tarjeta para Posiciones -->
-            <a href="posiciones.html" class="dashboard-card card-posiciones">
-                <h2 class="card-title">Posiciones (Sogui)</h2>
-                <p class="card-description">Bases y posturas fundamentales.</p>
-            </a>
+                <!-- Tarjeta para Posiciones -->
+                <a href="posiciones.html" class="dashboard-card card-posiciones">
+                     <div class="card-content">
+                        <h2 class="card-title">Posiciones</h2>
+                    </div>
+                </a>
 
-            <!-- Tarjeta para Defensa Personal -->
-            <a href="defensa.html" class="dashboard-card card-defensa">
-                <h2 class="card-title">Defensa Personal</h2>
-                <p class="card-description">Aplicaciones prácticas (Hosinul).</p>
-            </a>
+                <!-- Tarjeta para Defensa Personal -->
+                <a href="defensa.html" class="dashboard-card card-defensa">
+                     <div class="card-content">
+                        <h2 class="card-title">Defensa Personal</h2>
+                    </div>
+                </a>
 
-            <!-- Tarjeta para Samboderian -->
-            <a href="samboderian.html" class="dashboard-card card-samboderian">
-                <h2 class="card-title">Samboderian</h2>
-                <p class="card-description">Ejercicios básicos combinados.</p>
-            </a>
+                <!-- Tarjeta para Samboderian -->
+                <a href="samboderian.html" class="dashboard-card card-samboderian">
+                     <div class="card-content">
+                        <h2 class="card-title">Samboderian</h2>
+                    </div>
+                </a>
 
-            <!-- Tarjeta para Kicho -->
-            <a href="kicho.html" class="dashboard-card card-kicho">
-                <h2 class="card-title">Kicho</h2>
-                <p class="card-description">Formas básicas introductorias.</p>
-            </a>
+                <!-- Tarjeta para Kicho -->
+                <a href="kicho.html" class="dashboard-card card-kicho">
+                     <div class="card-content">
+                        <h2 class="card-title">Kicho</h2>
+                    </div>
+                </a>
 
-             <!-- Tarjeta para Glosario -->
-             <a href="glosario.html" class="dashboard-card card-glosario">
-                <h2 class="card-title">Glosario</h2>
-                <p class="card-description">Terminología esencial en Coreano.</p>
-            </a>
+                 <!-- Tarjeta para Glosario -->
+                 <a href="glosario.html" class="dashboard-card card-glosario">
+                     <div class="card-content">
+                        <h2 class="card-title">Glosario</h2>
+                    </div>
+                </a>
 
-        </div> <!-- Fin de dashboard-grid -->
-    </div> <!-- Fin de dashboard-container -->
+            </div> <!-- Fin de dashboard-grid -->
+        </div> <!-- Fin hero-content -->
+    </div> <!-- Fin hero-background -->
 
-    <!-- No se necesita JavaScript en esta página de inicio -->
-    <!-- No se necesita el modal de vídeo aquí -->
+    <!-- No se necesita JavaScript ni el modal de vídeo en esta página de inicio -->
 
 </body>
 </html>
