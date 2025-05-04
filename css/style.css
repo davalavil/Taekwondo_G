@@ -1,4 +1,4 @@
-/* === MODERNIZED STYLES - Taekwondo App (Multi-Page Refined with Dashboard) === */
+/* === MODERNIZED STYLES - Taekwondo App (Multi-Page Refined with Dashboard & Banners) === */
 
 /* === Import Google Font === */
 /* Asegúrate de añadir esto también a tu <head> en cada .html:
@@ -20,21 +20,27 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
+h1 { /* H1 Global - Usado principalmente en la portada ahora */
     text-align: center;
-    color: #212529; /* Color por defecto para H1 en páginas internas */
+    color: #212529;
     margin-top: 40px;
     margin-bottom: 30px;
     font-weight: 700;
     font-size: 2.2em;
 }
 
+/* Ocultar el H1 global en páginas que no son la portada (que usarán el banner) */
+body:not(.home-page) > h1 {
+    display: none;
+}
+
+
 /* === NAVIGATION STYLES (Para páginas de contenido, no en la portada) === */
 nav {
     background-color: #343a40;
     padding: 12px 0;
     text-align: center;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; Quitamos margen inferior, el banner lo dará */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -67,12 +73,12 @@ nav a.active {
 
 /* Fondo oscuro y estilo base para la página de inicio */
 body.home-page {
-    color: #e0e0e0; /* Color de texto claro por defecto */
+    background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460);
+    color: #e0e0e0;
     line-height: 1.6;
-    /* Quitamos el fondo de aquí, se aplica a .hero-background */
 }
 
-/* Contenedor del fondo (ocupa toda la pantalla) */
+/* Contenedor del fondo de la portada */
 .hero-background {
     min-height: 100vh;
     display: flex;
@@ -81,22 +87,18 @@ body.home-page {
     justify-content: center;
     padding: 40px 20px;
     box-sizing: border-box;
-
     /* --- Background Image Layering --- */
-    /* El gradiente va PRIMERO (capa superior) */
-    /* La imagen va SEGUNDA (capa inferior) */
-    /* Ajusta la opacidad del gradiente (ej. 0.85, 0.95) para controlar cuánta imagen se ve */
     background-image:
-        linear-gradient(rgba(15, 52, 96, 0.85), rgba(22, 33, 62, 0.95)), /* Gradiente azulado oscuro semi-transparente */
-        url('../images/Taekwondo_00.png'); /* <-- CAMBIA ESTO a tu ruta local, ej: url('../img/taekwondo-bg.jpg') */
+        linear-gradient(rgba(15, 52, 96, 0.85), rgba(22, 33, 62, 0.95)), /* Gradiente */
+        url('https://img.freepik.com/premium-photo/two-boys-white-kimono-training-taekwondo-with-red-blue-armor_777271-21439.jpg'); /* <-- CAMBIAR A RUTA LOCAL */
 
-    background-size: cover;         /* Cubrir todo el área */
-    background-position: center;    /* Centrar la imagen */
-    background-repeat: no-repeat;   /* No repetir la imagen */
-    background-attachment: fixed;   /* Efecto parallax (la imagen no se mueve con el scroll) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* Contenedor del contenido dentro del fondo */
+/* Contenedor del contenido dentro del fondo de la portada */
 .hero-content {
     max-width: 1200px;
     width: 100%;
@@ -109,9 +111,10 @@ body.home-page {
     font-size: 2.8em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: block; /* Asegurarse que se muestra en la home */
 }
 
-/* Estilo del subtítulo */
+/* Estilo del subtítulo en la portada */
 .subtitle {
     color: rgba(255, 255, 255, 0.8);
     font-size: 1.1em;
@@ -129,7 +132,7 @@ body.home-page {
 
 /* Estilo base de cada tarjeta del dashboard */
 .dashboard-card {
-    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil para las tarjetas */
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     text-decoration: none;
     color: #e0e0e0;
@@ -148,14 +151,14 @@ body.home-page {
     background-position: center;
 }
 
-/* Contenedor del texto dentro de la tarjeta */
+/* Contenedor del texto dentro de la tarjeta del dashboard */
 .card-content {
     position: relative;
     z-index: 2;
     text-align: left;
 }
 
-/* Pseudo-elemento para el degradado oscuro en la base (mejora legibilidad del texto) */
+/* Pseudo-elemento para el degradado oscuro en la base de la tarjeta */
 .dashboard-card::before {
     content: '';
     position: absolute;
@@ -178,7 +181,7 @@ body.home-page {
     opacity: 1;
 }
 
-/* Título dentro de la tarjeta */
+/* Título dentro de la tarjeta del dashboard */
 .dashboard-card .card-title {
     font-size: 1.6em;
     font-weight: 600;
@@ -192,8 +195,7 @@ body.home-page {
    display: none;
 }
 
-/* --- COLORES DE FONDO PARA TARJETAS (Si no se usan imágenes individuales) --- */
-/* Estos se aplicarán si no defines un background-image específico para cada .card-COLOR */
+/* Colores de fondo para tarjetas (si no se usan imágenes) */
  .card-poomsae { background-color: rgba(108, 117, 125, 0.2); }
  .card-caidas { background-color: rgba(13, 110, 253, 0.2); }
  .card-posiciones { background-color: rgba(25, 135, 84, 0.2); }
@@ -203,12 +205,66 @@ body.home-page {
  .card-glosario { background-color: rgba(111, 66, 193, 0.2); }
 
 
+/* === ESTILOS PARA BANNERS DE PÁGINAS INTERNAS === */
+
+.page-banner {
+    position: relative; /* Para el overlay */
+    min-height: 280px; /* Altura del banner */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff; /* Color de texto por defecto para el banner */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px; /* Espacio antes del contenido principal */
+}
+
+/* Overlay oscuro para mejorar legibilidad del texto sobre la imagen */
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6); /* Color oscuro semitransparente */
+    z-index: 1; /* Detrás del texto */
+}
+
+/* Estilo para el título dentro del banner */
+.page-banner h2 { /* Usamos H2 para títulos de sección interna */
+    position: relative; /* Para estar sobre el overlay */
+    z-index: 2;
+    font-size: 2.5em; /* Tamaño del título del banner */
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Imágenes de Fondo Específicas para cada Banner --- */
+/* !!! REEMPLAZA LAS URLS CON LAS RUTAS A TUS IMÁGENES LOCALES !!! */
+/* Ejemplo: url('../img/poomsae-banner.jpg') o url('img/poomsae-banner.jpg') */
+
+.banner-poomsae { background-image: url('URL_IMAGEN_POOMSAE_AQUI'); }
+.banner-caidas { background-image: url('URL_IMAGEN_CAIDAS_AQUI'); }
+.banner-posiciones { background-image: url('URL_IMAGEN_POSICIONES_AQUI'); }
+.banner-defensa { background-image: url('URL_IMAGEN_DEFENSA_AQUI'); }
+.banner-samboderian { background-image: url('URL_IMAGEN_SAMBODERIAN_AQUI'); }
+.banner-kicho { background-image: url('URL_IMAGEN_KICHO_AQUI'); }
+.banner-glosario { background-image: url('URL_IMAGEN_GLOSARIO_AQUI'); background-color: #343a40; }
+
+
 /* === CONTENIDO GENERAL (Para páginas internas: Poomsae, Caidas, etc.) === */
 .belt-container {
     max-width: 850px;
-    margin: 0 auto;
-    padding: 0 20px;
-    padding-bottom: 40px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px; /* Padding lateral */
+    padding-bottom: 40px; /* Espacio al final */
 }
 
 /* Estilo base para cada grupo de contenido (Tarjeta interna) */
@@ -237,7 +293,7 @@ body.home-page {
     font-weight: 600;
 }
 
-/* Título principal H2 dentro de una sección interna */
+/* Título principal H2 dentro de una sección interna (si se usa) */
 .belt-group > h2 {
     font-size: 1.8em;
     color: #343a40;
@@ -428,6 +484,9 @@ body.home-page {
     .dashboard-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .dashboard-card { padding: 20px 25px; min-height: 200px;}
     .dashboard-card .card-title { font-size: 1.4em; }
+    /* Banner Interno */
+    .page-banner { min-height: 240px; }
+    .page-banner h2 { font-size: 2.2em; }
     /* Contenido Interno */
     .belt-container { max-width: 720px; }
     .belt-group h3, .belt-group > h2 { font-size: 1.5em; }
@@ -443,8 +502,11 @@ body.home-page {
     .dashboard-card .card-title { font-size: 1.3em; }
     .dashboard-card .card-description { font-size: 0.85em; }
     .dashboard-card { min-height: 180px; padding: 15px; }
+    /* Banner Interno */
+    .page-banner { min-height: 200px; margin-bottom: 30px; }
+    .page-banner h2 { font-size: 2em; }
     /* Contenido Interno */
-    nav { padding: 10px 0; margin-bottom: 30px; }
+    nav { padding: 10px 0; /* margin-bottom ya no es necesario aquí */ }
     nav a { margin: 5px 6px; font-size: 0.85em; padding: 5px 10px; }
     .belt-container { padding: 0 15px; max-width: none; }
     .belt-group { padding: 25px; margin-bottom: 30px; border-top-width: 5px; border-radius: 10px; }
@@ -465,6 +527,9 @@ body.home-page {
     .dashboard-grid { grid-template-columns: 1fr; gap: 20px; }
     .dashboard-card { min-height: 160px; }
     .dashboard-card .card-title { font-size: 1.2em; }
+    /* Banner Interno */
+    .page-banner { min-height: 180px; }
+    .page-banner h2 { font-size: 1.8em; }
     /* Contenido Interno */
     nav a { display: block; margin: 8px auto; width: 85%; padding: 8px 12px; }
     .belt-group { padding: 20px; margin-bottom: 25px; border-radius: 8px; }
