@@ -250,10 +250,10 @@ body.home-page {
 /* !!! REEMPLAZA LAS URLS CON LAS RUTAS A TUS IMÁGENES LOCALES !!! */
 /* Ejemplo: url('../img/poomsae-banner.jpg') o url('img/poomsae-banner.jpg') */
 
-.banner-poomsae { background-image: url('../images/Taekwondo_01.png'); }
-.banner-caidas { background-image: url('../images/Taekwondo_01.png'); }
-.banner-posiciones { background-image: url('URL_IMAGEN_POSICIONES_AQUI'); }
-.banner-defensa { background-image: url('../images/Taekwondo_04.png'); }
+.banner-poomsae { background-image: url('../images/Taekwondo_02.png'); }
+.banner-caidas { background-image: url('../images/Taekwondo_03.png'); }
+.banner-posiciones { background-image: url('../images/Taekwondo_01.png'); }
+.banner-defensa { background-image: url('../images/Taekwondo_04.jpg'); }
 .banner-samboderian { background-image: url('URL_IMAGEN_SAMBODERIAN_AQUI'); }
 .banner-kicho { background-image: url('URL_IMAGEN_KICHO_AQUI'); }
 .banner-glosario { background-image: url('URL_IMAGEN_GLOSARIO_AQUI'); background-color: #343a40; }
