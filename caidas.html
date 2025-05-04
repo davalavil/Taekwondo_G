@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Taekwondo - Caídas</title> <!-- TÍTULO ESPECÍFICO -->
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Guía Completa de Taekwondo</h1>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <a href="index.html">Poomsae</a>
+        <a href="caidas.html" class="active">Caídas</a> <!-- Clase activa aquí -->
+        <a href="posiciones.html">Posiciones</a>
+        <a href="defensa.html">Defensa Personal</a>
+        <a href="samboderian.html">Samboderian</a>
+        <a href="kicho.html">Kicho</a>
+        <a href="glosario.html">Glosario</a>
+    </nav>
+
+    <!-- Contenedor para mostrar el vídeo (Modal) -->
+    <!-- Incluido porque esta página tiene botones de vídeo -->
+    <div id="video-player-container" class="hidden">
+        <button id="close-video">X</button>
+        <div id="video-player">
+            <!-- El iframe de YouTube se insertará aquí por JavaScript -->
+        </div>
+    </div>
+
+    <!-- Contenedor principal para el contenido -->
+    <div class="belt-container">
+
+        <!-- =============================== -->
+        <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Caídas) === -->
+        <section class="belt-group"> <!-- Usamos belt-group para estilo consistente -->
+            <h3>Caídas</h3> <!-- Título de la sección -->
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL">1. Lateral</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_IZQ">2. Voltereta pie izquierdo recogido</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_ESPALDA">3. Caer de espalda (golpe al suelo)</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_SALTO_DELANTE">4. Saltar para delante</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_SUPERMAN">5. Tirarte Superman</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_ESTIRADOS">6. Voltereta dos pies estirados</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_ATRAS">7. Correr de espaldas, hacer voltereta para detrás y caer de espaldas (golpear)</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL_PIES_DELANTE">8. Lateral con los pies por delante y sin adelantar la mano</button></li>
+            </ul>
+        </section>
+        <!-- === FIN CONTENIDO ESPECÍFICO === -->
+        <!-- =============================== -->
+
+    </div> <!-- Fin de belt-container -->
+
+    <!-- Link JavaScript -->
+    <!-- Incluido porque esta página tiene botones de vídeo -->
+    <script src="js/script.js"></script>
+</body>
+</html>

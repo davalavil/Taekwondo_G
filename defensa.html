@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Taekwondo - Defensa Personal</title> <!-- TÍTULO ESPECÍFICO -->
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Guía Completa de Taekwondo</h1>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <a href="index.html">Poomsae</a>
+        <a href="caidas.html">Caídas</a>
+        <a href="posiciones.html">Posiciones</a>
+        <a href="defensa.html" class="active">Defensa Personal</a> <!-- Clase activa aquí -->
+        <a href="samboderian.html">Samboderian</a>
+        <a href="kicho.html">Kicho</a>
+        <a href="glosario.html">Glosario</a>
+    </nav>
+
+    <!-- Contenedor para mostrar el vídeo (Modal) -->
+    <!-- Incluido porque esta página tiene botones de vídeo -->
+    <div id="video-player-container" class="hidden">
+        <button id="close-video">X</button>
+        <div id="video-player">
+            <!-- El iframe de YouTube se insertará aquí por JavaScript -->
+        </div>
+    </div>
+
+    <!-- Contenedor principal para el contenido -->
+    <div class="belt-container">
+
+        <!-- =============================== -->
+        <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Defensa Personal) === -->
+        <section class="belt-group"> <!-- Usamos belt-group para estilo consistente -->
+            <h3>Defensa Personal</h3> <!-- Título de la sección -->
+            <!-- Corresponde a las páginas 21-27 del Word -->
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_1">1. Primera defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_2">2. Segunda defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_3">3. Tercera defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_4">4. Cuarta defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_5">5. Quinta defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_6">6. Sexta defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_7">7. Séptima defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_8">8. Octava defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_9">9. Novena defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_10">10. Décima defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_11">11. Decimoprimera defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_12">12. Decimosegunda defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_13">13. Decimotercera defensa personal</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_14">14. Decimocuarta defensa personal</button></li>
+                <!-- Recuerda reemplazar ID_VIDEO_... con los IDs reales -->
+            </ul>
+        </section>
+        <!-- === FIN CONTENIDO ESPECÍFICO === -->
+        <!-- =============================== -->
+
+    </div> <!-- Fin de belt-container -->
+
+    <!-- Link JavaScript -->
+    <!-- Incluido porque esta página tiene botones de vídeo -->
+    <script src="js/script.js"></script>
+</body>
+</html>
