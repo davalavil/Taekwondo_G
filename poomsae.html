@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Taekwondo - Poomsae</title>
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css">
+     <!-- NOTA: Asegúrate de tener esta regla en tu style.css -->
+    <!--
+    <style>
+        .belt-black { border-top-color: #212529; } /* Negro para cinturón negro */
+    </style>
+     -->
+</head>
+<body>
+
+    <h1>Guía Completa de Taekwondo</h1>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <a href="index.html" class="active">Poomsae</a> <!-- Clase activa aquí -->
+        <a href="caidas.html">Caídas</a>
+        <a href="posiciones.html">Posiciones sogui</a>
+        <a href="defensa.html">Defensa Personal</a>
+        <a href="samboderian.html">Samboderian</a>
+        <a href="kicho.html">Kicho</a>
+        <a href="glosario.html">Glosario</a>
+    </nav>
+
+    <!-- Contenedor para mostrar el vídeo (Modal) -->
+    <div id="video-player-container" class="hidden">
+        <button id="close-video">X</button>
+        <div id="video-player"></div>
+    </div>
+
+    <!-- Contenedor principal para el contenido -->
+    <div class="belt-container">
+
+        <!-- =============================== -->
+        <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Poomsae) === -->
+
+        <section class="belt-group"> <!-- Contenedor principal para la sección Poomsae -->
+            <h2>Poomsae por Cinturón</h2>
+
+            <!-- Cinturón Blanco -->
+            <div class="belt-group belt-white">
+                <h3>Cinturón Blanco</h3>
+                <h4>WTF (World Taekwondo)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="9Pd7dvz1mtQ">Taeguk Il Chang</button></li>
+                </ul>
+                <h4>ITF (International Taekwon-Do Federation)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="d082oCqYWKU">Sanchi Han</button></li>
+                </ul>
+            </div>
+
+            <!-- Cinturón Amarillo -->
+            <div class="belt-group belt-yellow">
+                <h3>Cinturón Amarillo</h3>
+                <h4>WTF (World Taekwondo)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="FSB8m0zdAEo">Taeguk I Chang</button></li>
+                </ul>
+                <h4>ITF (International Taekwon-Do Federation)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="gFhZbe-lXEQ">Dan-Gun Yang</button></li>
+                </ul>
+            </div>
+
+            <!-- Cinturón Naranja -->
+            <div class="belt-group belt-orange">
+                <h3>Cinturón Naranja</h3>
+                <h4>WTF (World Taekwondo)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="syTX0igty04">Taeguk Sam Chang</button></li>
+                </ul>
+                <h4>ITF (International Taekwon-Do Federation)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="ZymHffK60Lg">Do-San Yang</button></li>
+                </ul>
+            </div>
+
+            <!-- Cinturón Verde -->
+            <div class="belt-group belt-green">
+                <h3>Cinturón Verde</h3>
+                <h4>WTF (World Taekwondo)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="ASUa6pRm2bs">Taeguk Sa Chang</button></li>
+                </ul>
+                <h4>ITF (International Taekwon-Do Federation)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="lfy3rT86OpI">Won-Hyo Yang</button></li>
+                </ul>
+            </div>
+
+            <!-- Cinturón Azul -->
+            <div class="belt-group belt-blue">
+                <h3>Cinturón Azul</h3>
+                <h4>WTF (World Taekwondo)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="7rnuN_CBn0I">Taeguk Oh Chang</button></li>
+                    <li><button class="video-trigger" data-video-id="GrC2oVYwUM8">Taeguk Yuk Chang</button></li>
+                </ul>
+                <h4>ITF (International Taekwon-Do Federation)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="I-GhxuaVAh0">Yul-Gok Gup</button></li>
+                </ul>
+            </div>
+
+            <!-- Cinturón Rojo -->
+            <div class="belt-group belt-red">
+                <h3>Cinturón Rojo</h3>
+                <h4>WTF (World Taekwondo)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="VXvkQjdUUto">Taeguk Chil Chang</button></li>
+                    <li><button class="video-trigger" data-video-id="vGWkdK7m3kY">Taeguk Pal Chang</button></li>
+                </ul>
+                <!-- Sección ITF comentada sigue comentada -->
+            </div>
+
+            <!-- Cinturón Negro -->
+            <div class="belt-group belt-black"> <!-- NUEVA SECCIÓN -->
+                <h3>Cinturón Negro</h3>
+                <h4>WTF (World Taekwondo)</h4>
+                <ul>
+                    <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_KORYO">Koryo</button></li>
+                    <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_KEUMGANG">Keumgang</button></li>
+                    <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_TAEBAEK">Taebaek</button></li>
+                    <!-- Puedes añadir más poomsae de cinturón negro aquí -->
+                    <!-- <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_PYONGWON">Pyongwon</button></li> -->
+                    <!-- <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_SIPJIN">Sipjin</button></li> -->
+                    <!-- ... etc -->
+                    <!-- Recuerda reemplazar ID_VIDEO_... con los IDs reales -->
+                </ul>
+                <!-- Podrías añadir una sección ITF aquí si tuvieras esos poomsae -->
+            </div>
+
+        </section> <!-- Fin de sección Poomsae -->
+
+        <!-- === FIN CONTENIDO ESPECÍFICO === -->
+        <!-- =============================== -->
+
+    </div> <!-- Fin de belt-container -->
+
+    <!-- Link JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
