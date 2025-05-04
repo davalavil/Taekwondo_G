@@ -1,7 +1,7 @@
-/* === MODERNIZED STYLES - Taekwondo App (Responsive Refined) === */
+/* === MODERNIZED STYLES - Taekwondo App (Multi-Page Refined) === */
 
 /* === Import Google Font === */
-/* Asegúrate de añadir esto también a tu <head> en index.html:
+/* Asegúrate de añadir esto también a tu <head> en cada .html:
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     color: #212529; /* Negro menos intenso */
     margin-top: 40px;
-    margin-bottom: 30px; /* Reducido un poco por la nav */
+    margin-bottom: 30px; /* Menos espacio antes de la nav */
     font-weight: 700; /* Más peso */
     font-size: 2.2em; /* Tamaño base para desktop */
 }
@@ -34,10 +34,10 @@ nav {
     background-color: #343a40; /* Dark background */
     padding: 12px 0;
     text-align: center;
-    margin-bottom: 40px; /* Increased margin */
-    position: sticky; /* Make it stick to the top */
-    top: 0;
-    z-index: 900; /* Ensure it's above content but below modal */
+    margin-bottom: 40px; /* Separación después de la nav */
+    /* position: sticky; /* Opcional: si quieres que se quede fija arriba */
+    /* top: 0; */
+    /* z-index: 900; */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
@@ -59,54 +59,55 @@ nav a:hover, nav a:focus {
     outline: none; /* Remove focus outline */
 }
 
+/* Estilo para el enlace de la página activa */
+nav a.active {
+    background-color: #6c757d; /* Un gris más oscuro o un color de acento */
+    color: #ffffff;
+    cursor: default; /* Indica que ya estás en esa página */
+}
 
-/* Contenedor general para centrar los grupos de contenido */
+
+/* Contenedor general para centrar el contenido */
 .belt-container {
     max-width: 850px; /* Ancho máximo en desktop */
     margin: 0 auto;
     padding: 0 20px; /* Padding lateral en desktop */
 }
 
-/* === SECTION STYLING === */
-/* Offset para la navegación pegajosa */
-section[id] {
-    scroll-margin-top: 80px; /* Ajusta este valor basado en la altura de tu nav + algo de padding */
-}
-
 /* Estilo base para cada grupo de contenido (Tarjeta) */
+/* Usado para Poomsae, Caidas, Posiciones, Defensa, Samboderian, Kicho, Glosario */
 .belt-group {
     background-color: #ffffff; /* Fondo blanco para todas las tarjetas */
     padding: 30px; /* Padding interno en desktop */
     border-radius: 12px; /* Esquinas más redondeadas */
     margin-bottom: 35px; /* Separación entre tarjetas en desktop */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Sombra más suave y moderna */
-    border-top: 6px solid transparent; /* Espacio para el color del cinturón como acento o sin color */
+    border-top: 6px solid transparent; /* Espacio para el color del cinturón o un color genérico */
     color: #343a40; /* Color de texto oscuro dentro de la tarjeta */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Título general de las secciones principales (Poomsae, Caídas, etc.) */
-.belt-group > h2 {
-    font-size: 1.8em;
-    color: #343a40;
-    margin-top: 0; /* Reset margin top */
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e9ecef;
-    text-align: center; /* Center section titles */
-    font-weight: 600;
+/* Borde genérico para secciones sin color específico */
+.belt-group:not([class*='belt-']) { /* Aplica si NO tiene una clase belt-* */
+    border-top-color: #6c757d; /* Un gris neutro */
 }
 
-/* Título de cada sub-grupo (ej. Cinturón Blanco, Amarillo) */
+/* Efecto hover sutil para las tarjetas (opcional) */
+/* .belt-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+} */
+
+/* Título de cada sección/cinturón */
 .belt-group h3 {
     color: #212529; /* Color de título principal de tarjeta */
     margin-top: 0;
-    margin-bottom: 25px; /* Espacio después del título del cinturón */
+    margin-bottom: 25px; /* Espacio después del título */
     font-size: 1.6em; /* Tamaño desktop */
     font-weight: 600;
 }
 
-/* Subtítulos (WTF, ITF, Kicho, etc.) */
+/* Subtítulos (WTF, ITF, Kicho, etc. dentro de Poomsae o Glosario) */
 .belt-group h4 {
     color: #6c757d; /* Gris para subtítulos */
     margin-top: 30px; /* Espacio antes del subtítulo */
@@ -153,14 +154,13 @@ section[id] {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil al pasar el ratón */
 }
 
-/* === ACENTOS DE COLOR POR CINTURÓN (en border-top de los divs internos) === */
+/* === ACENTOS DE COLOR POR CINTURÓN (en border-top para Poomsae) === */
 .belt-white { border-top-color: #dcdcdc; } /* Un gris claro para blanco */
 .belt-yellow { border-top-color: #ffeb3b; }
 .belt-orange { border-top-color: #ff9800; }
 .belt-green { border-top-color: #4caf50; }
 .belt-blue { border-top-color: #2196f3; }
 .belt-red { border-top-color: #f44336; }
-
 
 /* === ESTILOS PARA EL REPRODUCTOR DE VÍDEO (MODAL) === */
 #video-player-container {
@@ -224,10 +224,10 @@ section[id] {
     padding: 0; /* Quitar padding si usamos tamaño fijo */
     border-radius: 50%; /* Hacerlo circular */
     cursor: pointer;
-    z-index: 1001; /* Encima del video */
+    z-index: 1001;
     transition: background-color 0.3s ease, transform 0.2s ease;
     backdrop-filter: blur(4px); /* Desenfoque del fondo (soporte variable) */
-    font-family: sans-serif; /* Fuente genérica para 'X' */
+    font-family: sans-serif; /* Fuente genérica para la X */
 }
 
 #close-video:hover {
@@ -236,84 +236,78 @@ section[id] {
 }
 
 /* === GLOSSARY SPECIFIC STYLES === */
+/* Targeting h4 inside .glossary specifically */
 .glossary h4 {
-    /* Reutiliza estilo h4 o personaliza */
     margin-top: 25px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #eee; /* Línea sutil bajo subcabeceras */
+    border-bottom: 1px solid #eee; /* Subtle line under glossary subheadings */
     padding-bottom: 8px;
+     /* Inherits other h4 styles */
 }
 
 .glossary dl {
     margin-bottom: 20px;
-    padding-left: 5px; /* Ligera indentación */
+    padding-left: 5px; /* Slight indent */
 }
 
 .glossary dt {
-    font-weight: 600; /* Términos en negrita */
-    color: #495057; /* Un poco más oscuro */
+    font-weight: 600; /* Make terms bold */
+    color: #495057; /* Slightly darker */
     margin-bottom: 3px;
 }
 
 .glossary dd {
-    margin-left: 15px; /* Indentar definiciones */
-    margin-bottom: 10px; /* Espacio entre definiciones */
-    color: #6c757d; /* Texto más claro para definiciones */
+    margin-left: 15px; /* Indent definitions */
+    margin-bottom: 10px; /* Space between definitions */
+    color: #6c757d; /* Lighter text for definitions */
     font-size: 0.95em;
     line-height: 1.6;
 }
 
-.glossary p { /* Para listas simples como Números/Ordinales */
+.glossary p { /* For simple lists like Numbers/Ordinals */
      margin-left: 15px;
      color: #6c757d;
      font-size: 0.95em;
      margin-bottom: 15px;
 }
 
-
 /* === RESPONSIVIDAD === */
 
 /* Tabletas (ej. iPads, pantallas medianas) */
-@media (max-width: 991px) {
+@media (max-width: 991px) { /* Ajustado breakpoint para cubrir más tabletas */
     .belt-container {
         max-width: 720px; /* Ancho contenedor en tabletas */
     }
     h1 {
         font-size: 2em; /* Ligeramente más pequeño */
     }
-    .belt-group h2 {
-        font-size: 1.7em;
-    }
     .belt-group h3 {
         font-size: 1.5em;
+    }
+    /* Nav adjustments for tablets might go here if needed */
+    nav a {
+        margin: 0 8px;
     }
 }
 
 /* Tabletas pequeñas y móviles grandes en landscape */
-@media (max-width: 767px) {
+@media (max-width: 767px) { /* Renombrado/ajustado breakpoint común */
     h1 {
         font-size: 1.9em; /* Reducir tamaño en pantallas medianas/pequeñas */
         margin-top: 30px;
-        margin-bottom: 30px; /* Ajustado por nav */
+        margin-bottom: 25px; /* Adjusted margin before nav */
     }
 
-     /* --- Responsive Nav Styles --- */
     nav {
         padding: 10px 0;
         margin-bottom: 30px;
-        position: static; /* Quita sticky si molesta */
-        /* O mantén sticky y ajusta scroll-margin-top abajo */
+        /* position: static; /* Uncomment if you don't want sticky nav on mobile */
     }
     nav a {
-        margin: 5px 8px; /* Ajustar espaciado */
+        margin: 5px 6px; /* Adjust spacing */
         font-size: 0.85em;
+        padding: 5px 10px;
     }
-    section[id] {
-        scroll-margin-top: 10px; /* Ajustar si nav ya no es sticky */
-        /* O mantener valor mayor si nav sigue sticky */
-    }
-    /* --- Fin Responsive Nav Styles --- */
-
 
     .belt-container {
         padding: 0 15px; /* Menos padding lateral */
@@ -325,10 +319,6 @@ section[id] {
         margin-bottom: 30px; /* Ligeramente menos margen */
         border-top-width: 5px; /* Borde superior un poco más delgado */
         border-radius: 10px; /* Ligeramente menos redondeo */
-    }
-
-     .belt-group > h2 {
-        font-size: 1.6em;
     }
 
     .belt-group h3 {
@@ -370,33 +360,27 @@ section[id] {
 }
 
 /* Móviles (portrait) */
-@media (max-width: 575px) {
+@media (max-width: 575px) { /* Breakpoint para móviles más pequeños */
     body {
         line-height: 1.6; /* Puede ser necesario ajustar línea si fuente es pequeña */
     }
     h1 {
         font-size: 1.65em; /* Tamaño más pequeño para móviles */
-        margin-bottom: 25px; /* Ajustado por nav */
+        margin-bottom: 20px;
     }
 
-     /* --- Responsive Nav Styles --- */
-     nav a {
-        display: block; /* Apilar enlaces verticalmente */
-        margin: 8px auto; /* Centrar enlaces */
-        width: 80%; /* Darles algo de ancho */
-     }
-     section[id] {
-        scroll-margin-top: 10px; /* Probablemente nav no es sticky */
-     }
-     /* --- Fin Responsive Nav Styles --- */
+    /* Stack nav links vertically */
+    nav a {
+        display: block;
+        margin: 8px auto; /* Center links */
+        width: 85%; /* Give some width */
+        padding: 8px 12px;
+    }
 
     .belt-group {
         padding: 20px; /* Menos padding aún */
         margin-bottom: 25px;
         border-radius: 8px;
-    }
-     .belt-group > h2 {
-        font-size: 1.4em;
     }
     .belt-group h3 {
         font-size: 1.3em; /* Título de cinturón más pequeño */
@@ -421,8 +405,9 @@ section[id] {
         font-size: 1.2em;
         line-height: 30px;
     }
+
     .glossary dd, .glossary p {
         font-size: 0.9em;
-        margin-left: 10px; /* Menos indentación */
+        margin-left: 10px;
     }
 }
