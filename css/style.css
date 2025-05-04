@@ -1,1 +1,428 @@
-dddd
+/* === MODERNIZED STYLES - Taekwondo App (Responsive Refined) === */
+
+/* === Import Google Font === */
+/* Asegúrate de añadir esto también a tu <head> en index.html:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+*/
+
+/* === ESTILOS GENERALES (Base - Desktop First) === */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Gris claro más moderno */
+    color: #495057; /* Color de texto base */
+    line-height: 1.7; /* Ligeramente más espacio entre líneas */
+    font-weight: 400; /* Peso normal */
+    -webkit-font-smoothing: antialiased; /* Mejor renderizado de fuentes en Webkit */
+    -moz-osx-font-smoothing: grayscale; /* Mejor renderizado de fuentes en Firefox */
+}
+
+h1 {
+    text-align: center;
+    color: #212529; /* Negro menos intenso */
+    margin-top: 40px;
+    margin-bottom: 30px; /* Reducido un poco por la nav */
+    font-weight: 700; /* Más peso */
+    font-size: 2.2em; /* Tamaño base para desktop */
+}
+
+/* === NAVIGATION STYLES === */
+nav {
+    background-color: #343a40; /* Dark background */
+    padding: 12px 0;
+    text-align: center;
+    margin-bottom: 40px; /* Increased margin */
+    position: sticky; /* Make it stick to the top */
+    top: 0;
+    z-index: 900; /* Ensure it's above content but below modal */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+nav a {
+    color: #f8f9fa; /* Light text */
+    margin: 0 12px; /* Spacing */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 0.9em; /* Slightly smaller */
+    display: inline-block; /* Needed for padding */
+}
+
+nav a:hover, nav a:focus {
+    background-color: #495057; /* Darker grey on hover */
+    color: #ffffff; /* White text */
+    outline: none; /* Remove focus outline */
+}
+
+
+/* Contenedor general para centrar los grupos de contenido */
+.belt-container {
+    max-width: 850px; /* Ancho máximo en desktop */
+    margin: 0 auto;
+    padding: 0 20px; /* Padding lateral en desktop */
+}
+
+/* === SECTION STYLING === */
+/* Offset para la navegación pegajosa */
+section[id] {
+    scroll-margin-top: 80px; /* Ajusta este valor basado en la altura de tu nav + algo de padding */
+}
+
+/* Estilo base para cada grupo de contenido (Tarjeta) */
+.belt-group {
+    background-color: #ffffff; /* Fondo blanco para todas las tarjetas */
+    padding: 30px; /* Padding interno en desktop */
+    border-radius: 12px; /* Esquinas más redondeadas */
+    margin-bottom: 35px; /* Separación entre tarjetas en desktop */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Sombra más suave y moderna */
+    border-top: 6px solid transparent; /* Espacio para el color del cinturón como acento o sin color */
+    color: #343a40; /* Color de texto oscuro dentro de la tarjeta */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Título general de las secciones principales (Poomsae, Caídas, etc.) */
+.belt-group > h2 {
+    font-size: 1.8em;
+    color: #343a40;
+    margin-top: 0; /* Reset margin top */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+    text-align: center; /* Center section titles */
+    font-weight: 600;
+}
+
+/* Título de cada sub-grupo (ej. Cinturón Blanco, Amarillo) */
+.belt-group h3 {
+    color: #212529; /* Color de título principal de tarjeta */
+    margin-top: 0;
+    margin-bottom: 25px; /* Espacio después del título del cinturón */
+    font-size: 1.6em; /* Tamaño desktop */
+    font-weight: 600;
+}
+
+/* Subtítulos (WTF, ITF, Kicho, etc.) */
+.belt-group h4 {
+    color: #6c757d; /* Gris para subtítulos */
+    margin-top: 30px; /* Espacio antes del subtítulo */
+    margin-bottom: 15px; /* Espacio después del subtítulo */
+    font-size: 0.95em; /* Tamaño adecuado */
+    font-weight: 600; /* Un poco de peso */
+    text-transform: uppercase;
+    letter-spacing: 0.5px; /* Ligero espaciado entre letras */
+    border-bottom: none; /* Sin borde inferior */
+    padding-bottom: 0;
+}
+
+.belt-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0; /* Ajuste de márgenes */
+}
+
+.belt-group li {
+    margin-bottom: 8px; /* Espacio entre botones/items */
+}
+
+/* === ESTILOS DE BOTONES DE VÍDEO === */
+.video-trigger {
+    background-color: #f1f3f5; /* Fondo gris muy claro */
+    color: #495057 !important; /* Texto gris oscuro, !important para asegurar */
+    border: 1px solid #dee2e6; /* Borde gris claro */
+    padding: 12px 18px; /* Padding más generoso en desktop */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 1em; /* Tamaño base desktop */
+    font-weight: 500; /* Peso medio */
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    display: block; /* Asegura que ocupa el 100% correctamente */
+}
+
+.video-trigger:hover {
+    background-color: #e9ecef; /* Gris un poco más oscuro */
+    border-color: #ced4da;
+    color: #212529 !important; /* Texto más oscuro */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil al pasar el ratón */
+}
+
+/* === ACENTOS DE COLOR POR CINTURÓN (en border-top de los divs internos) === */
+.belt-white { border-top-color: #dcdcdc; } /* Un gris claro para blanco */
+.belt-yellow { border-top-color: #ffeb3b; }
+.belt-orange { border-top-color: #ff9800; }
+.belt-green { border-top-color: #4caf50; }
+.belt-blue { border-top-color: #2196f3; }
+.belt-red { border-top-color: #f44336; }
+
+
+/* === ESTILOS PARA EL REPRODUCTOR DE VÍDEO (MODAL) === */
+#video-player-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 37, 41, 0.88); /* Fondo oscuro semi-transparente */
+    display: flex; /* Usar flex para centrar */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px; /* Padding general del overlay */
+    box-sizing: border-box;
+    opacity: 0; /* Empezar invisible */
+    visibility: hidden; /* Empezar oculto */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transición para ocultar */
+}
+
+/* Estilo cuando el modal es visible (cuando NO tiene la clase .hidden) */
+#video-player-container:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease; /* Transición para mostrar */
+}
+
+#video-player {
+    position: relative;
+    width: 90%; /* Ancho relativo al contenedor padre */
+    max-width: 900px; /* Máximo ancho en pantallas grandes */
+    aspect-ratio: 16 / 9; /* Proporción 16:9 moderna */
+    background-color: black;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border-radius: 8px; /* Bordes redondeados para el contenedor del vídeo */
+    overflow: hidden; /* Asegura que el iframe no se salga */
+}
+
+#video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#close-video {
+    position: absolute;
+    top: 20px; /* Posición en desktop */
+    right: 25px; /* Posición en desktop */
+    width: 40px; /* Tamaño en desktop */
+    height: 40px; /* Tamaño en desktop */
+    background-color: rgba(40, 40, 40, 0.7); /* Fondo oscuro translúcido */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    font-size: 1.4em; /* Tamaño del icono 'X' en desktop */
+    font-weight: 300; /* Peso ligero para la 'X' */
+    line-height: 38px; /* Centrar verticalmente la 'X' */
+    text-align: center;
+    padding: 0; /* Quitar padding si usamos tamaño fijo */
+    border-radius: 50%; /* Hacerlo circular */
+    cursor: pointer;
+    z-index: 1001; /* Encima del video */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(4px); /* Desenfoque del fondo (soporte variable) */
+    font-family: sans-serif; /* Fuente genérica para 'X' */
+}
+
+#close-video:hover {
+    background-color: rgba(220, 53, 69, 0.9); /* Rojo al pasar el ratón */
+    transform: scale(1.1); /* Efecto de escala */
+}
+
+/* === GLOSSARY SPECIFIC STYLES === */
+.glossary h4 {
+    /* Reutiliza estilo h4 o personaliza */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Línea sutil bajo subcabeceras */
+    padding-bottom: 8px;
+}
+
+.glossary dl {
+    margin-bottom: 20px;
+    padding-left: 5px; /* Ligera indentación */
+}
+
+.glossary dt {
+    font-weight: 600; /* Términos en negrita */
+    color: #495057; /* Un poco más oscuro */
+    margin-bottom: 3px;
+}
+
+.glossary dd {
+    margin-left: 15px; /* Indentar definiciones */
+    margin-bottom: 10px; /* Espacio entre definiciones */
+    color: #6c757d; /* Texto más claro para definiciones */
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.glossary p { /* Para listas simples como Números/Ordinales */
+     margin-left: 15px;
+     color: #6c757d;
+     font-size: 0.95em;
+     margin-bottom: 15px;
+}
+
+
+/* === RESPONSIVIDAD === */
+
+/* Tabletas (ej. iPads, pantallas medianas) */
+@media (max-width: 991px) {
+    .belt-container {
+        max-width: 720px; /* Ancho contenedor en tabletas */
+    }
+    h1 {
+        font-size: 2em; /* Ligeramente más pequeño */
+    }
+    .belt-group h2 {
+        font-size: 1.7em;
+    }
+    .belt-group h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Tabletas pequeñas y móviles grandes en landscape */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.9em; /* Reducir tamaño en pantallas medianas/pequeñas */
+        margin-top: 30px;
+        margin-bottom: 30px; /* Ajustado por nav */
+    }
+
+     /* --- Responsive Nav Styles --- */
+    nav {
+        padding: 10px 0;
+        margin-bottom: 30px;
+        position: static; /* Quita sticky si molesta */
+        /* O mantén sticky y ajusta scroll-margin-top abajo */
+    }
+    nav a {
+        margin: 5px 8px; /* Ajustar espaciado */
+        font-size: 0.85em;
+    }
+    section[id] {
+        scroll-margin-top: 10px; /* Ajustar si nav ya no es sticky */
+        /* O mantener valor mayor si nav sigue sticky */
+    }
+    /* --- Fin Responsive Nav Styles --- */
+
+
+    .belt-container {
+        padding: 0 15px; /* Menos padding lateral */
+        max-width: none; /* Permitir que use más ancho disponible si es necesario */
+    }
+
+    .belt-group {
+        padding: 25px; /* Menos padding interno */
+        margin-bottom: 30px; /* Ligeramente menos margen */
+        border-top-width: 5px; /* Borde superior un poco más delgado */
+        border-radius: 10px; /* Ligeramente menos redondeo */
+    }
+
+     .belt-group > h2 {
+        font-size: 1.6em;
+    }
+
+    .belt-group h3 {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .belt-group h4 {
+        font-size: 0.9em;
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+
+     .video-trigger {
+        padding: 11px 16px; /* Ajustar padding del botón */
+        font-size: 0.95em;
+        border-radius: 6px;
+    }
+
+    #video-player-container {
+        padding: 15px; /* Menos padding en el overlay del modal */
+    }
+
+    #video-player {
+         width: 100%; /* Ocupar todo el ancho disponible en modal */
+         max-width: none; /* Quitar límite máximo */
+         border-radius: 6px; /* Menos redondeo */
+    }
+
+     /* Ajuste botón cerrar modal para mejor toque */
+     #close-video {
+        top: 15px;
+        right: 15px;
+        width: 36px; /* Tamaño adecuado para toque */
+        height: 36px;
+        font-size: 1.3em;
+        line-height: 34px; /* Re-centrar X */
+    }
+}
+
+/* Móviles (portrait) */
+@media (max-width: 575px) {
+    body {
+        line-height: 1.6; /* Puede ser necesario ajustar línea si fuente es pequeña */
+    }
+    h1 {
+        font-size: 1.65em; /* Tamaño más pequeño para móviles */
+        margin-bottom: 25px; /* Ajustado por nav */
+    }
+
+     /* --- Responsive Nav Styles --- */
+     nav a {
+        display: block; /* Apilar enlaces verticalmente */
+        margin: 8px auto; /* Centrar enlaces */
+        width: 80%; /* Darles algo de ancho */
+     }
+     section[id] {
+        scroll-margin-top: 10px; /* Probablemente nav no es sticky */
+     }
+     /* --- Fin Responsive Nav Styles --- */
+
+    .belt-group {
+        padding: 20px; /* Menos padding aún */
+        margin-bottom: 25px;
+        border-radius: 8px;
+    }
+     .belt-group > h2 {
+        font-size: 1.4em;
+    }
+    .belt-group h3 {
+        font-size: 1.3em; /* Título de cinturón más pequeño */
+    }
+    .belt-group h4 {
+        font-size: 0.85em; /* Subtítulo más pequeño */
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .video-trigger {
+        padding: 10px 15px;
+        font-size: 0.9em; /* Texto del botón más pequeño */
+    }
+     #video-player-container {
+        padding: 10px; /* Mínimo padding en modal */
+    }
+    #close-video {
+        top: 10px;
+        right: 10px;
+        width: 32px; /* Un poco más pequeño si es necesario */
+        height: 32px;
+        font-size: 1.2em;
+        line-height: 30px;
+    }
+    .glossary dd, .glossary p {
+        font-size: 0.9em;
+        margin-left: 10px; /* Menos indentación */
+    }
+}
