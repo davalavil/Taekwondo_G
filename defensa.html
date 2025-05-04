@@ -13,19 +13,22 @@
 </head>
 <body>
 
-    <h1>Guía Completa de Taekwondo</h1>
-
-    <!-- Barra de Navegación ACTUALIZADA -->
+    <!-- Barra de Navegación -->
     <nav>
-        <a href="index.html">Inicio</a> <!-- NUEVO enlace a la portada -->
-        <a href="poomsae.html">Poomsae</a> <!-- Apunta a poomsae.html -->
+        <a href="index.html">Inicio</a>
+        <a href="poomsae.html">Poomsae</a>
         <a href="caidas.html">Caídas</a>
         <a href="posiciones.html">Posiciones (Sogui)</a>
-        <a href="defensa.html" class="active">Defensa Personal</a> <!-- Clase activa aquí -->
+        <a href="defensa.html" class="active">Defensa Personal</a>
         <a href="samboderian.html">Samboderian</a>
         <a href="kicho.html">Kicho</a>
         <a href="glosario.html">Glosario</a>
     </nav>
+
+    <!-- NUEVO BANNER CON IMAGEN DE FONDO -->
+    <div class="page-banner banner-defensa"> <!-- Clase específica -->
+        <h2>Defensa Personal</h2> <!-- Título -->
+    </div>
 
     <!-- Contenedor para mostrar el vídeo (Modal) -->
     <div id="video-player-container" class="hidden">
@@ -35,10 +38,10 @@
 
     <!-- Contenedor principal para el contenido -->
     <div class="belt-container">
-
         <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Defensa Personal) === -->
-        <section class="belt-group"> <!-- Usamos belt-group para estilo consistente -->
-            <h3>Defensa Personal</h3> <!-- Título de la sección -->
+        <section class="belt-group">
+            <!-- Podrías mantener el H3 aquí si quieres, o quitarlo ya que está en el banner -->
+            <!-- <h3>Defensa Personal</h3> -->
             <ul>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_1">1. Primera defensa personal</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_2">2. Segunda defensa personal</button></li>
@@ -54,11 +57,9 @@
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_12">12. Decimosegunda defensa personal</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_13">13. Decimotercera defensa personal</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_DEFENSA_14">14. Decimocuarta defensa personal</button></li>
-                <!-- Recuerda reemplazar ID_VIDEO_... con los IDs reales -->
             </ul>
         </section>
         <!-- === FIN CONTENIDO ESPECÍFICO === -->
-
     </div> <!-- Fin de belt-container -->
 
     <!-- Link JavaScript -->
