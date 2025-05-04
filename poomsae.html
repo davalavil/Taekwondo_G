@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía Taekwondo - Poomsae por Cinturón</title> <!-- TÍTULO ESPECÍFICO -->
+    <title>Guía Taekwondo - Poomsae por Cinturón</title>
     <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Link CSS -->
     <link rel="stylesheet" href="css/style.css">
-     <!-- NOTA: Asegúrate de tener esta regla en tu style.css -->
+    <!-- NOTA: Asegúrate de tener esta regla en tu style.css -->
     <!--
     <style>
         .belt-black { border-top-color: #212529; } /* Negro para cinturón negro */
@@ -19,12 +19,10 @@
 </head>
 <body>
 
-    <h1>Guía Completa de Taekwondo</h1>
-
     <!-- Barra de Navegación ACTUALIZADA -->
     <nav>
         <a href="index.html">Inicio</a> <!-- Enlace a la nueva portada -->
-        <a href="poomsae.html" class="active">Poomsae</a> <!-- Clase activa aquí y apunta a sí mismo -->
+        <a href="poomsae.html" class="active">Poomsae</a> <!-- Clase activa aquí -->
         <a href="caidas.html">Caídas</a>
         <a href="posiciones.html">Posiciones (Sogui)</a>
         <a href="defensa.html">Defensa Personal</a>
@@ -32,6 +30,11 @@
         <a href="kicho.html">Kicho</a>
         <a href="glosario.html">Glosario</a>
     </nav>
+
+    <!-- NUEVO BANNER CON IMAGEN DE FONDO -->
+    <div class="page-banner banner-poomsae"> <!-- Clase específica -->
+        <h2>Poomsae</h2> <!-- Título -->
+    </div>
 
     <!-- Contenedor para mostrar el vídeo (Modal) -->
     <div id="video-player-container" class="hidden">
@@ -42,12 +45,10 @@
     <!-- Contenedor principal para el contenido -->
     <div class="belt-container">
 
-        <!-- =============================== -->
         <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Poomsae) === -->
-        <!-- Este es el contenido que estaba originalmente en index.html -->
-
-        <section class="belt-group"> <!-- Contenedor principal para la sección Poomsae -->
-            <h2>Poomsae por Cinturón</h2>
+        <section class="belt-group">
+            <!-- El H2 interno "Poomsae por Cinturón" se puede quitar o mantener -->
+             <h2>Poomsae por Cinturón</h2>
 
             <!-- Cinturón Blanco -->
             <div class="belt-group belt-white">
@@ -61,7 +62,6 @@
                     <li><button class="video-trigger" data-video-id="d082oCqYWKU">Sanchi Han</button></li>
                 </ul>
             </div>
-
             <!-- Cinturón Amarillo -->
             <div class="belt-group belt-yellow">
                 <h3>Cinturón Amarillo</h3>
@@ -74,7 +74,6 @@
                     <li><button class="video-trigger" data-video-id="gFhZbe-lXEQ">Dan-Gun Yang</button></li>
                 </ul>
             </div>
-
             <!-- Cinturón Naranja -->
             <div class="belt-group belt-orange">
                 <h3>Cinturón Naranja</h3>
@@ -87,7 +86,6 @@
                     <li><button class="video-trigger" data-video-id="ZymHffK60Lg">Do-San Yang</button></li>
                 </ul>
             </div>
-
             <!-- Cinturón Verde -->
             <div class="belt-group belt-green">
                 <h3>Cinturón Verde</h3>
@@ -100,7 +98,6 @@
                     <li><button class="video-trigger" data-video-id="lfy3rT86OpI">Won-Hyo Yang</button></li>
                 </ul>
             </div>
-
             <!-- Cinturón Azul -->
             <div class="belt-group belt-blue">
                 <h3>Cinturón Azul</h3>
@@ -114,7 +111,6 @@
                     <li><button class="video-trigger" data-video-id="I-GhxuaVAh0">Yul-Gok Gup</button></li>
                 </ul>
             </div>
-
             <!-- Cinturón Rojo -->
             <div class="belt-group belt-red">
                 <h3>Cinturón Rojo</h3>
@@ -123,9 +119,7 @@
                     <li><button class="video-trigger" data-video-id="VXvkQjdUUto">Taeguk Chil Chang</button></li>
                     <li><button class="video-trigger" data-video-id="vGWkdK7m3kY">Taeguk Pal Chang</button></li>
                 </ul>
-                <!-- Sección ITF comentada sigue comentada -->
             </div>
-
             <!-- Cinturón Negro -->
             <div class="belt-group belt-black">
                 <h3>Cinturón Negro</h3>
@@ -134,15 +128,10 @@
                     <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_KORYO">Koryo</button></li>
                     <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_KEUMGANG">Keumgang</button></li>
                     <li><button class="video-trigger" data-video-id="ID_VIDEO_POOMSAE_TAEBAEK">Taebaek</button></li>
-                    <!-- Recuerda reemplazar ID_VIDEO_... con los IDs reales -->
                 </ul>
             </div>
-
-        </section> <!-- Fin de sección Poomsae -->
-
+        </section>
         <!-- === FIN CONTENIDO ESPECÍFICO === -->
-        <!-- =============================== -->
-
     </div> <!-- Fin de belt-container -->
 
     <!-- Link JavaScript -->
