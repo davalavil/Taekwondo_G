@@ -67,107 +67,115 @@ nav a.active {
 
 /* Fondo oscuro y estilo base para la página de inicio */
 body.home-page {
-    background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460); /* Gradiente oscuro azulado */
     color: #e0e0e0; /* Color de texto claro por defecto */
     line-height: 1.6;
+    /* Quitamos el fondo de aquí, se aplica a .hero-background */
 }
 
 /* Contenedor del fondo (ocupa toda la pantalla) */
 .hero-background {
-    min-height: 100vh; /* Asegura que ocupa al menos toda la altura de la pantalla */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centra el contenido verticalmente */
+    justify-content: center;
     padding: 40px 20px;
     box-sizing: border-box;
-    /* Opcional: Añadir una imagen de fondo tipo collage */
-    /* background-image: linear-gradient(rgba(15, 52, 96, 0.85), rgba(22, 33, 62, 0.9)), url('../path/to/your/tkd-collage.jpg'); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-attachment: fixed; /* Efecto parallax sutil */
+
+    /* --- Background Image Layering --- */
+    /* El gradiente va PRIMERO (capa superior) */
+    /* La imagen va SEGUNDA (capa inferior) */
+    /* Ajusta la opacidad del gradiente (ej. 0.85, 0.95) para controlar cuánta imagen se ve */
+    background-image:
+        linear-gradient(rgba(15, 52, 96, 0.85), rgba(22, 33, 62, 0.95)), /* Gradiente azulado oscuro semi-transparente */
+        url('https://img.freepik.com/premium-photo/two-boys-white-kimono-training-taekwondo-with-red-blue-armor_777271-21439.jpg'); /* <-- CAMBIA ESTO a tu ruta local, ej: url('../img/taekwondo-bg.jpg') */
+
+    background-size: cover;         /* Cubrir todo el área */
+    background-position: center;    /* Centrar la imagen */
+    background-repeat: no-repeat;   /* No repetir la imagen */
+    background-attachment: fixed;   /* Efecto parallax (la imagen no se mueve con el scroll) */
 }
 
 /* Contenedor del contenido dentro del fondo */
 .hero-content {
-    max-width: 1200px; /* Ancho máximo del contenido */
+    max-width: 1200px;
     width: 100%;
     text-align: center;
 }
 
 /* Estilo del título principal en la portada */
 .home-page h1 {
-    color: #ffffff; /* Blanco para el título */
-    font-size: 2.8em; /* Más grande */
-    margin-bottom: 15px; /* Menos espacio */
+    color: #ffffff;
+    font-size: 2.8em;
+    margin-bottom: 15px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo del subtítulo */
 .subtitle {
-    color: rgba(255, 255, 255, 0.8); /* Blanco semi-transparente */
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1.1em;
-    margin-bottom: 40px; /* Espacio antes de las tarjetas */
+    margin-bottom: 40px;
     font-weight: 300;
 }
 
 /* Grid para las tarjetas del dashboard */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Columnas responsivas */
-    gap: 30px; /* Espacio entre tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
     width: 100%;
 }
 
 /* Estilo base de cada tarjeta del dashboard */
 .dashboard-card {
-    background-color: rgba(255, 255, 255, 0.05); /* Fondo muy sutil o usar imágenes */
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil para las tarjetas */
     border-radius: 15px;
     text-decoration: none;
     color: #e0e0e0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     display: flex;
-    align-items: flex-end; /* Alinea el contenido abajo */
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
-    min-height: 220px; /* Altura de las tarjetas */
+    align-items: flex-end;
+    justify-content: flex-start;
+    min-height: 220px;
     overflow: hidden;
-    position: relative; /* Para superponer contenido */
+    position: relative;
     padding: 20px;
     box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-    background-size: cover; /* Para las imágenes de fondo opcionales */
-    background-position: center; /* Para las imágenes de fondo opcionales */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    background-position: center;
 }
 
 /* Contenedor del texto dentro de la tarjeta */
 .card-content {
-    position: relative; /* Asegura que está sobre el pseudo-elemento :before */
+    position: relative;
     z-index: 2;
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: left;
 }
 
-/* Pseudo-elemento para el degradado oscuro en la base (si se usan imágenes) */
+/* Pseudo-elemento para el degradado oscuro en la base (mejora legibilidad del texto) */
 .dashboard-card::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70%; /* Altura del degradado */
-    background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 10%, rgba(15, 23, 42, 0) 100%); /* Ajusta colores */
+    height: 70%;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 10%, rgba(15, 23, 42, 0) 100%);
     z-index: 1;
-    opacity: 0.8; /* Ajusta opacidad del degradado */
+    opacity: 0.8;
     transition: opacity 0.3s ease;
 }
 
 .dashboard-card:hover {
-    transform: translateY(-8px) scale(1.02); /* Efecto más pronunciado */
+    transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    background-color: rgba(255, 255, 255, 0.1); /* Cambio sutil al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .dashboard-card:hover::before {
-    opacity: 1; /* Intensifica el degradado al pasar el ratón */
+    opacity: 1;
 }
 
 /* Título dentro de la tarjeta */
@@ -184,14 +192,8 @@ body.home-page {
    display: none;
 }
 
-/* --- IMÁGENES DE FONDO O COLORES PARA TARJETAS --- */
-/* Descomenta y ajusta rutas si usas imágenes, o deja los colores */
-
-/* .card-poomsae { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url('../img/poomsae_bg.jpg'); } */
-/* .card-caidas { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url('../img/caidas_bg.jpg'); } */
-/* ... (otras imágenes) ... */
-
-/* Si no usas imágenes, estos colores de fondo se aplicarán */
+/* --- COLORES DE FONDO PARA TARJETAS (Si no se usan imágenes individuales) --- */
+/* Estos se aplicarán si no defines un background-image específico para cada .card-COLOR */
  .card-poomsae { background-color: rgba(108, 117, 125, 0.2); }
  .card-caidas { background-color: rgba(13, 110, 253, 0.2); }
  .card-posiciones { background-color: rgba(25, 135, 84, 0.2); }
@@ -206,7 +208,7 @@ body.home-page {
     max-width: 850px;
     margin: 0 auto;
     padding: 0 20px;
-    padding-bottom: 40px; /* Añade espacio al final de las páginas internas */
+    padding-bottom: 40px;
 }
 
 /* Estilo base para cada grupo de contenido (Tarjeta interna) */
@@ -303,7 +305,7 @@ body.home-page {
 .belt-green { border-top-color: #4caf50; }
 .belt-blue { border-top-color: #2196f3; }
 .belt-red { border-top-color: #f44336; }
-.belt-black { border-top-color: #212529; } /* Color para cinturón negro */
+.belt-black { border-top-color: #212529; }
 
 
 /* === ESTILOS PARA EL REPRODUCTOR DE VÍDEO (MODAL) === */
@@ -417,10 +419,8 @@ body.home-page {
 
 /* === RESPONSIVIDAD === */
 
-/* Tabletas (ej. iPads, pantallas medianas) */
 @media (max-width: 991px) {
     h1 { font-size: 2em; }
-
     /* Dashboard */
     .home-page h1 { font-size: 2.4em; }
     .subtitle { font-size: 1em; margin-bottom: 30px; }
@@ -428,17 +428,14 @@ body.home-page {
     .dashboard-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .dashboard-card { padding: 20px 25px; min-height: 200px;}
     .dashboard-card .card-title { font-size: 1.4em; }
-
     /* Contenido Interno */
     .belt-container { max-width: 720px; }
     .belt-group h3, .belt-group > h2 { font-size: 1.5em; }
     nav a { margin: 0 8px; }
 }
 
-/* Tabletas pequeñas y móviles grandes en landscape */
 @media (max-width: 767px) {
     h1 { font-size: 1.9em; margin-top: 30px; margin-bottom: 25px; }
-
     /* Dashboard */
     .home-page h1 { font-size: 2em; }
     .subtitle { font-size: 0.95em; }
@@ -446,8 +443,6 @@ body.home-page {
     .dashboard-card .card-title { font-size: 1.3em; }
     .dashboard-card .card-description { font-size: 0.85em; }
     .dashboard-card { min-height: 180px; padding: 15px; }
-
-
     /* Contenido Interno */
     nav { padding: 10px 0; margin-bottom: 30px; }
     nav a { margin: 5px 6px; font-size: 0.85em; padding: 5px 10px; }
@@ -461,19 +456,15 @@ body.home-page {
     #close-video { top: 15px; right: 15px; width: 36px; height: 36px; font-size: 1.3em; line-height: 34px; }
 }
 
-/* Móviles (portrait) */
 @media (max-width: 575px) {
     body { line-height: 1.6; }
     h1 { font-size: 1.65em; margin-bottom: 20px; }
-
     /* Dashboard */
     .home-page h1 { font-size: 1.8em; }
     .hero-background { padding-top: 30px; }
     .dashboard-grid { grid-template-columns: 1fr; gap: 20px; }
     .dashboard-card { min-height: 160px; }
     .dashboard-card .card-title { font-size: 1.2em; }
-
-
     /* Contenido Interno */
     nav a { display: block; margin: 8px auto; width: 85%; padding: 8px 12px; }
     .belt-group { padding: 20px; margin-bottom: 25px; border-radius: 8px; }
