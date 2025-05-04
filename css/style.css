@@ -1,4 +1,4 @@
-/* === MODERNIZED STYLES - Taekwondo App (Multi-Page Refined) === */
+/* === MODERNIZED STYLES - Taekwondo App (Multi-Page Refined with Dashboard) === */
 
 /* === Import Google Font === */
 /* Asegúrate de añadir esto también a tu <head> en cada .html:
@@ -9,101 +9,150 @@
 
 /* === ESTILOS GENERALES (Base - Desktop First) === */
 body {
-    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Gris claro más moderno */
-    color: #495057; /* Color de texto base */
-    line-height: 1.7; /* Ligeramente más espacio entre líneas */
-    font-weight: 400; /* Peso normal */
-    -webkit-font-smoothing: antialiased; /* Mejor renderizado de fuentes en Webkit */
-    -moz-osx-font-smoothing: grayscale; /* Mejor renderizado de fuentes en Firefox */
+    background-color: #f8f9fa;
+    color: #495057;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
     text-align: center;
-    color: #212529; /* Negro menos intenso */
+    color: #212529;
     margin-top: 40px;
-    margin-bottom: 30px; /* Menos espacio antes de la nav */
-    font-weight: 700; /* Más peso */
-    font-size: 2.2em; /* Tamaño base para desktop */
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2.2em;
 }
 
-/* === NAVIGATION STYLES === */
+/* === NAVIGATION STYLES (Para páginas de contenido) === */
 nav {
-    background-color: #343a40; /* Dark background */
+    background-color: #343a40;
     padding: 12px 0;
     text-align: center;
-    margin-bottom: 40px; /* Separación después de la nav */
-    /* position: sticky; /* Opcional: si quieres que se quede fija arriba */
-    /* top: 0; */
-    /* z-index: 900; */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    margin-bottom: 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav a {
-    color: #f8f9fa; /* Light text */
-    margin: 0 12px; /* Spacing */
+    color: #f8f9fa;
+    margin: 0 12px;
     text-decoration: none;
     font-weight: 500;
     padding: 6px 12px;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    font-size: 0.9em; /* Slightly smaller */
-    display: inline-block; /* Needed for padding */
+    font-size: 0.9em;
+    display: inline-block;
 }
 
 nav a:hover, nav a:focus {
-    background-color: #495057; /* Darker grey on hover */
-    color: #ffffff; /* White text */
-    outline: none; /* Remove focus outline */
+    background-color: #495057;
+    color: #ffffff;
+    outline: none;
 }
 
 /* Estilo para el enlace de la página activa */
 nav a.active {
-    background-color: #6c757d; /* Un gris más oscuro o un color de acento */
+    background-color: #6c757d;
     color: #ffffff;
-    cursor: default; /* Indica que ya estás en esa página */
+    cursor: default;
 }
 
+/* === DASHBOARD STYLES (Para index.html) === */
+.dashboard-container {
+    max-width: 1100px; /* Ancho máximo para el dashboard */
+    margin: 40px auto; /* Margen superior/inferior y centrado */
+    padding: 0 20px;
+}
 
-/* Contenedor general para centrar el contenido */
+.dashboard-grid {
+    display: grid;
+    /* Ajusta el número de columnas según prefieras */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 25px; /* Espacio entre tarjetas */
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    text-decoration: none; /* Quitar subrayado del enlace */
+    color: #495057; /* Color de texto base para la tarjeta */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Apilar título y descripción */
+    justify-content: center; /* Centrar contenido verticalmente */
+    min-height: 150px; /* Altura mínima para consistencia */
+    border-left: 8px solid transparent; /* Espacio para color de acento */
+    overflow: hidden; /* Para efectos sutiles si se añaden */
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px); /* Efecto levantar al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card .card-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #212529;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.dashboard-card .card-description {
+    font-size: 0.9em;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Colores de acento para las tarjetas del dashboard (en border-left) */
+.card-poomsae { border-left-color: #6c757d; } /* Gris neutro */
+.card-caidas { border-left-color: #0d6efd; } /* Azul */
+.card-posiciones { border-left-color: #198754; } /* Verde */
+.card-defensa { border-left-color: #dc3545; } /* Rojo */
+.card-samboderian { border-left-color: #ffc107; } /* Amarillo */
+.card-kicho { border-left-color: #fd7e14; } /* Naranja */
+.card-glosario { border-left-color: #6f42c1; } /* Púrpura */
+
+
+/* === CONTENIDO GENERAL (Para páginas internas) === */
 .belt-container {
-    max-width: 850px; /* Ancho máximo en desktop */
+    max-width: 850px;
     margin: 0 auto;
-    padding: 0 20px; /* Padding lateral en desktop */
+    padding: 0 20px;
 }
 
 /* Estilo base para cada grupo de contenido (Tarjeta) */
-/* Usado para Poomsae, Caidas, Posiciones, Defensa, Samboderian, Kicho, Glosario */
 .belt-group {
-    background-color: #ffffff; /* Fondo blanco para todas las tarjetas */
-    padding: 30px; /* Padding interno en desktop */
-    border-radius: 12px; /* Esquinas más redondeadas */
-    margin-bottom: 35px; /* Separación entre tarjetas en desktop */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Sombra más suave y moderna */
-    border-top: 6px solid transparent; /* Espacio para el color del cinturón o un color genérico */
-    color: #343a40; /* Color de texto oscuro dentro de la tarjeta */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    border-top: 6px solid transparent;
+    color: #343a40;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Borde genérico para secciones sin color específico (como el contenedor de Poomsae o Glosario) */
-.belt-group:not([class*='belt-']) { /* Aplica si NO tiene una clase belt-* */
-    border-top-color: #6c757d; /* Un gris neutro */
+/* Borde genérico para secciones sin color específico (contenedor Poomsae, Defensa, Glosario...) */
+.belt-group:not([class*='belt-']) {
+    border-top-color: #6c757d; /* Gris neutro */
 }
-
-/* Efecto hover sutil para las tarjetas (opcional) */
-/* .belt-group:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-} */
 
 /* Título de cada sección/cinturón */
 .belt-group h3 {
-    color: #212529; /* Color de título principal de tarjeta */
+    color: #212529;
     margin-top: 0;
-    margin-bottom: 25px; /* Espacio después del título */
-    font-size: 1.6em; /* Tamaño desktop */
+    margin-bottom: 25px;
+    font-size: 1.6em;
     font-weight: 600;
 }
 
@@ -111,24 +160,23 @@ nav a.active {
 .belt-group > h2 {
     font-size: 1.8em;
     color: #343a40;
-    margin-top: 0; /* Reset margin for h2 inside belt-group */
+    margin-top: 0;
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-bottom: 2px solid #e9ecef;
     text-align: center;
 }
 
-
-/* Subtítulos (WTF, ITF, Kicho, etc. dentro de Poomsae o Glosario) */
+/* Subtítulos (WTF, ITF, etc.) */
 .belt-group h4 {
-    color: #6c757d; /* Gris para subtítulos */
-    margin-top: 30px; /* Espacio antes del subtítulo */
-    margin-bottom: 15px; /* Espacio después del subtítulo */
-    font-size: 0.95em; /* Tamaño adecuado */
-    font-weight: 600; /* Un poco de peso */
+    color: #6c757d;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px; /* Ligero espaciado entre letras */
-    border-bottom: none; /* Sin borde inferior */
+    letter-spacing: 0.5px;
+    border-bottom: none;
     padding-bottom: 0;
 }
 /* Ajuste para que el primer h4 no tenga tanto margen superior */
@@ -136,49 +184,48 @@ nav a.active {
     margin-top: 5px;
 }
 
-
 .belt-group ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 10px 0; /* Ajuste de márgenes */
+    margin: 0 0 10px 0;
 }
 
 .belt-group li {
-    margin-bottom: 8px; /* Espacio entre botones/items */
+    margin-bottom: 8px;
 }
 
 /* === ESTILOS DE BOTONES DE VÍDEO === */
 .video-trigger {
-    background-color: #f1f3f5; /* Fondo gris muy claro */
-    color: #495057 !important; /* Texto gris oscuro, !important para asegurar */
-    border: 1px solid #dee2e6; /* Borde gris claro */
-    padding: 12px 18px; /* Padding más generoso en desktop */
-    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f1f3f5;
+    color: #495057 !important;
+    border: 1px solid #dee2e6;
+    padding: 12px 18px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1em; /* Tamaño base desktop */
-    font-weight: 500; /* Peso medio */
+    font-size: 1em;
+    font-weight: 500;
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
     text-align: left;
     box-sizing: border-box;
-    display: block; /* Asegura que ocupa el 100% correctamente */
+    display: block;
 }
 
 .video-trigger:hover {
-    background-color: #e9ecef; /* Gris un poco más oscuro */
+    background-color: #e9ecef;
     border-color: #ced4da;
-    color: #212529 !important; /* Texto más oscuro */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil al pasar el ratón */
+    color: #212529 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 /* === ACENTOS DE COLOR POR CINTURÓN (en border-top) === */
-.belt-white { border-top-color: #dcdcdc; } /* Un gris claro para blanco */
+.belt-white { border-top-color: #dcdcdc; }
 .belt-yellow { border-top-color: #ffeb3b; }
 .belt-orange { border-top-color: #ff9800; }
 .belt-green { border-top-color: #4caf50; }
 .belt-blue { border-top-color: #2196f3; }
 .belt-red { border-top-color: #f44336; }
-.belt-black { border-top-color: #212529; } /* NUEVA REGLA PARA NEGRO */
+.belt-black { border-top-color: #212529; } /* Color para cinturón negro */
 
 
 /* === ESTILOS PARA EL REPRODUCTOR DE VÍDEO (MODAL) === */
@@ -188,34 +235,33 @@ nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(33, 37, 41, 0.88); /* Fondo oscuro semi-transparente */
-    display: flex; /* Usar flex para centrar */
+    background-color: rgba(33, 37, 41, 0.88);
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    padding: 20px; /* Padding general del overlay */
+    padding: 20px;
     box-sizing: border-box;
-    opacity: 0; /* Empezar invisible */
-    visibility: hidden; /* Empezar oculto */
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transición para ocultar */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
 
-/* Estilo cuando el modal es visible (cuando NO tiene la clase .hidden) */
 #video-player-container:not(.hidden) {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.3s ease; /* Transición para mostrar */
+    transition: opacity 0.3s ease;
 }
 
 #video-player {
     position: relative;
-    width: 90%; /* Ancho relativo al contenedor padre */
-    max-width: 900px; /* Máximo ancho en pantallas grandes */
-    aspect-ratio: 16 / 9; /* Proporción 16:9 moderna */
+    width: 90%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
     background-color: black;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    border-radius: 8px; /* Bordes redondeados para el contenedor del vídeo */
-    overflow: hidden; /* Asegura que el iframe no se salga */
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 #video-player iframe {
@@ -229,65 +275,62 @@ nav a.active {
 
 #close-video {
     position: absolute;
-    top: 20px; /* Posición en desktop */
-    right: 25px; /* Posición en desktop */
-    width: 40px; /* Tamaño en desktop */
-    height: 40px; /* Tamaño en desktop */
-    background-color: rgba(40, 40, 40, 0.7); /* Fondo oscuro translúcido */
+    top: 20px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(40, 40, 40, 0.7);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
-    font-size: 1.4em; /* Tamaño del icono 'X' en desktop */
-    font-weight: 300; /* Peso ligero para la 'X' */
-    line-height: 38px; /* Centrar verticalmente la 'X' */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 38px;
     text-align: center;
-    padding: 0; /* Quitar padding si usamos tamaño fijo */
-    border-radius: 50%; /* Hacerlo circular */
+    padding: 0;
+    border-radius: 50%;
     cursor: pointer;
     z-index: 1001;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    backdrop-filter: blur(4px); /* Desenfoque del fondo (soporte variable) */
-    font-family: sans-serif; /* Fuente genérica para la X */
+    backdrop-filter: blur(4px);
+    font-family: sans-serif;
 }
 
 #close-video:hover {
-    background-color: rgba(220, 53, 69, 0.9); /* Rojo al pasar el ratón */
-    transform: scale(1.1); /* Efecto de escala */
+    background-color: rgba(220, 53, 69, 0.9);
+    transform: scale(1.1);
 }
 
 /* === GLOSSARY SPECIFIC STYLES === */
-/* Targeting h4 inside .glossary specifically */
 .glossary h4 {
     margin-top: 25px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #eee; /* Subtle line under glossary subheadings */
+    border-bottom: 1px solid #eee;
     padding-bottom: 8px;
-     /* Inherits other h4 styles */
 }
-.glossary h3 + h4 { /* Remove extra top margin for first h4 in glossary */
+.glossary h3 + h4 {
      margin-top: 5px;
 }
 
-
 .glossary dl {
     margin-bottom: 20px;
-    padding-left: 5px; /* Slight indent */
+    padding-left: 5px;
 }
 
 .glossary dt {
-    font-weight: 600; /* Make terms bold */
-    color: #495057; /* Slightly darker */
+    font-weight: 600;
+    color: #495057;
     margin-bottom: 3px;
 }
 
 .glossary dd {
-    margin-left: 15px; /* Indent definitions */
-    margin-bottom: 10px; /* Space between definitions */
-    color: #6c757d; /* Lighter text for definitions */
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: #6c757d;
     font-size: 0.95em;
     line-height: 1.6;
 }
 
-.glossary p { /* For simple lists like Numbers/Ordinals */
+.glossary p {
      margin-left: 15px;
      color: #6c757d;
      font-size: 0.95em;
@@ -298,13 +341,28 @@ nav a.active {
 
 /* Tabletas (ej. iPads, pantallas medianas) */
 @media (max-width: 991px) {
-    .belt-container {
-        max-width: 720px;
-    }
     h1 {
         font-size: 2em;
     }
-    .belt-group h3, .belt-group > h2 { /* Apply to both h3 and section h2 */
+    /* Dashboard */
+    .dashboard-container {
+        max-width: 90%;
+    }
+    .dashboard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .dashboard-card {
+        padding: 20px 25px;
+    }
+    .dashboard-card .card-title {
+        font-size: 1.3em;
+    }
+    /* Contenido Interno */
+    .belt-container {
+        max-width: 720px;
+    }
+    .belt-group h3, .belt-group > h2 {
         font-size: 1.5em;
     }
     nav a {
@@ -319,6 +377,19 @@ nav a.active {
         margin-top: 30px;
         margin-bottom: 25px;
     }
+    /* Dashboard */
+    .dashboard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Más pequeñas aún */
+        gap: 18px;
+    }
+     .dashboard-card .card-title {
+        font-size: 1.2em;
+    }
+     .dashboard-card .card-description {
+        font-size: 0.85em;
+    }
+
+    /* Contenido Interno */
     nav {
         padding: 10px 0;
         margin-bottom: 30px;
@@ -379,7 +450,18 @@ nav a.active {
         font-size: 1.65em;
         margin-bottom: 20px;
     }
-    nav a {
+    /* Dashboard */
+     .dashboard-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles pequeños */
+        gap: 15px;
+    }
+    .dashboard-card {
+         min-height: 120px;
+         padding: 18px 20px;
+    }
+
+    /* Contenido Interno */
+    nav a { /* Se aplica a páginas internas */
         display: block;
         margin: 8px auto;
         width: 85%;
