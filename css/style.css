@@ -87,7 +87,7 @@ nav a.active {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Borde genérico para secciones sin color específico */
+/* Borde genérico para secciones sin color específico (como el contenedor de Poomsae o Glosario) */
 .belt-group:not([class*='belt-']) { /* Aplica si NO tiene una clase belt-* */
     border-top-color: #6c757d; /* Un gris neutro */
 }
@@ -107,6 +107,18 @@ nav a.active {
     font-weight: 600;
 }
 
+/* Título principal dentro de una sección (ej. "Poomsae por Cinturón") */
+.belt-group > h2 {
+    font-size: 1.8em;
+    color: #343a40;
+    margin-top: 0; /* Reset margin for h2 inside belt-group */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+    text-align: center;
+}
+
+
 /* Subtítulos (WTF, ITF, Kicho, etc. dentro de Poomsae o Glosario) */
 .belt-group h4 {
     color: #6c757d; /* Gris para subtítulos */
@@ -119,6 +131,11 @@ nav a.active {
     border-bottom: none; /* Sin borde inferior */
     padding-bottom: 0;
 }
+/* Ajuste para que el primer h4 no tenga tanto margen superior */
+.belt-group h3 + h4 {
+    margin-top: 5px;
+}
+
 
 .belt-group ul {
     list-style: none;
@@ -154,13 +171,15 @@ nav a.active {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil al pasar el ratón */
 }
 
-/* === ACENTOS DE COLOR POR CINTURÓN (en border-top para Poomsae) === */
+/* === ACENTOS DE COLOR POR CINTURÓN (en border-top) === */
 .belt-white { border-top-color: #dcdcdc; } /* Un gris claro para blanco */
 .belt-yellow { border-top-color: #ffeb3b; }
 .belt-orange { border-top-color: #ff9800; }
 .belt-green { border-top-color: #4caf50; }
 .belt-blue { border-top-color: #2196f3; }
 .belt-red { border-top-color: #f44336; }
+.belt-black { border-top-color: #212529; } /* NUEVA REGLA PARA NEGRO */
+
 
 /* === ESTILOS PARA EL REPRODUCTOR DE VÍDEO (MODAL) === */
 #video-player-container {
@@ -244,6 +263,10 @@ nav a.active {
     padding-bottom: 8px;
      /* Inherits other h4 styles */
 }
+.glossary h3 + h4 { /* Remove extra top margin for first h4 in glossary */
+     margin-top: 5px;
+}
+
 
 .glossary dl {
     margin-bottom: 20px;
@@ -274,138 +297,122 @@ nav a.active {
 /* === RESPONSIVIDAD === */
 
 /* Tabletas (ej. iPads, pantallas medianas) */
-@media (max-width: 991px) { /* Ajustado breakpoint para cubrir más tabletas */
+@media (max-width: 991px) {
     .belt-container {
-        max-width: 720px; /* Ancho contenedor en tabletas */
+        max-width: 720px;
     }
     h1 {
-        font-size: 2em; /* Ligeramente más pequeño */
+        font-size: 2em;
     }
-    .belt-group h3 {
+    .belt-group h3, .belt-group > h2 { /* Apply to both h3 and section h2 */
         font-size: 1.5em;
     }
-    /* Nav adjustments for tablets might go here if needed */
     nav a {
         margin: 0 8px;
     }
 }
 
 /* Tabletas pequeñas y móviles grandes en landscape */
-@media (max-width: 767px) { /* Renombrado/ajustado breakpoint común */
+@media (max-width: 767px) {
     h1 {
-        font-size: 1.9em; /* Reducir tamaño en pantallas medianas/pequeñas */
+        font-size: 1.9em;
         margin-top: 30px;
-        margin-bottom: 25px; /* Adjusted margin before nav */
+        margin-bottom: 25px;
     }
-
     nav {
         padding: 10px 0;
         margin-bottom: 30px;
-        /* position: static; /* Uncomment if you don't want sticky nav on mobile */
     }
     nav a {
-        margin: 5px 6px; /* Adjust spacing */
+        margin: 5px 6px;
         font-size: 0.85em;
         padding: 5px 10px;
     }
-
     .belt-container {
-        padding: 0 15px; /* Menos padding lateral */
-        max-width: none; /* Permitir que use más ancho disponible si es necesario */
+        padding: 0 15px;
+        max-width: none;
     }
-
     .belt-group {
-        padding: 25px; /* Menos padding interno */
-        margin-bottom: 30px; /* Ligeramente menos margen */
-        border-top-width: 5px; /* Borde superior un poco más delgado */
-        border-radius: 10px; /* Ligeramente menos redondeo */
+        padding: 25px;
+        margin-bottom: 30px;
+        border-top-width: 5px;
+        border-radius: 10px;
     }
-
-    .belt-group h3 {
+     .belt-group h3, .belt-group > h2 {
         font-size: 1.4em;
         margin-bottom: 20px;
     }
-
     .belt-group h4 {
         font-size: 0.9em;
         margin-top: 25px;
         margin-bottom: 12px;
     }
-
      .video-trigger {
-        padding: 11px 16px; /* Ajustar padding del botón */
+        padding: 11px 16px;
         font-size: 0.95em;
         border-radius: 6px;
     }
-
     #video-player-container {
-        padding: 15px; /* Menos padding en el overlay del modal */
+        padding: 15px;
     }
-
     #video-player {
-         width: 100%; /* Ocupar todo el ancho disponible en modal */
-         max-width: none; /* Quitar límite máximo */
-         border-radius: 6px; /* Menos redondeo */
+         width: 100%;
+         max-width: none;
+         border-radius: 6px;
     }
-
-     /* Ajuste botón cerrar modal para mejor toque */
      #close-video {
         top: 15px;
         right: 15px;
-        width: 36px; /* Tamaño adecuado para toque */
+        width: 36px;
         height: 36px;
         font-size: 1.3em;
-        line-height: 34px; /* Re-centrar X */
+        line-height: 34px;
     }
 }
 
 /* Móviles (portrait) */
-@media (max-width: 575px) { /* Breakpoint para móviles más pequeños */
+@media (max-width: 575px) {
     body {
-        line-height: 1.6; /* Puede ser necesario ajustar línea si fuente es pequeña */
+        line-height: 1.6;
     }
     h1 {
-        font-size: 1.65em; /* Tamaño más pequeño para móviles */
+        font-size: 1.65em;
         margin-bottom: 20px;
     }
-
-    /* Stack nav links vertically */
     nav a {
         display: block;
-        margin: 8px auto; /* Center links */
-        width: 85%; /* Give some width */
+        margin: 8px auto;
+        width: 85%;
         padding: 8px 12px;
     }
-
     .belt-group {
-        padding: 20px; /* Menos padding aún */
+        padding: 20px;
         margin-bottom: 25px;
         border-radius: 8px;
     }
-    .belt-group h3 {
-        font-size: 1.3em; /* Título de cinturón más pequeño */
+     .belt-group h3, .belt-group > h2 {
+        font-size: 1.3em;
     }
     .belt-group h4 {
-        font-size: 0.85em; /* Subtítulo más pequeño */
+        font-size: 0.85em;
         margin-top: 20px;
         margin-bottom: 10px;
     }
     .video-trigger {
         padding: 10px 15px;
-        font-size: 0.9em; /* Texto del botón más pequeño */
+        font-size: 0.9em;
     }
      #video-player-container {
-        padding: 10px; /* Mínimo padding en modal */
+        padding: 10px;
     }
     #close-video {
         top: 10px;
         right: 10px;
-        width: 32px; /* Un poco más pequeño si es necesario */
+        width: 32px;
         height: 32px;
         font-size: 1.2em;
         line-height: 30px;
     }
-
     .glossary dd, .glossary p {
         font-size: 0.9em;
         margin-left: 10px;
