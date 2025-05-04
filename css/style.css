@@ -90,7 +90,7 @@ body.home-page {
     /* --- Background Image Layering --- */
     background-image:
         linear-gradient(rgba(15, 52, 96, 0.85), rgba(22, 33, 62, 0.95)), /* Gradiente */
-        url('https://img.freepik.com/premium-photo/two-boys-white-kimono-training-taekwondo-with-red-blue-armor_777271-21439.jpg'); /* <-- CAMBIAR A RUTA LOCAL */
+        url('.../images/Taekwondo_00.png'); /* <-- CAMBIAR A RUTA LOCAL */
 
     background-size: cover;
     background-position: center;
