@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía Taekwondo - Posiciones sogui</title> <!-- TÍTULO ESPECÍFICO -->
+    <title>Guía Taekwondo - Posiciones por Cinturón</title>
     <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Link CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- NOTA: Considera añadir esta regla a tu style.css -->
+    <!--
+    <style>
+        .belt-black { border-top-color: #212529; } /* Negro para cinturón negro */
+    </style>
+     -->
 </head>
 <body>
 
@@ -27,23 +33,79 @@
     </nav>
 
     <!-- Contenedor para mostrar el vídeo (Modal) -->
-    <!-- Incluido porque esta página tiene botones de vídeo -->
     <div id="video-player-container" class="hidden">
         <button id="close-video">X</button>
-        <div id="video-player">
-            <!-- El iframe de YouTube se insertará aquí por JavaScript -->
-        </div>
+        <div id="video-player"></div>
     </div>
 
     <!-- Contenedor principal para el contenido -->
     <div class="belt-container">
 
         <!-- =============================== -->
-        <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Posiciones) === -->
-        <section class="belt-group"> <!-- Usamos belt-group para estilo consistente -->
-            <h3>Posiciones de Pie (Sogui)</h3> <!-- Título de la sección -->
-            <!-- Corresponde a la página 20 del Word -->
+        <!-- === CONTENIDO ESPECÍFICO DE LA PÁGINA (Posiciones por Cinturón) === -->
+
+        <!-- Cinturón Blanco -->
+        <div class="belt-group belt-white">
+            <h3>Cinturón Blanco (Hasta Sogui 4)</h3>
+            <ul>
+                <li><button class="video-trigger" data-video-id="kATpHwphRKU">1. Ap sogui</button></li>
+                <li><button class="video-trigger" data-video-id="YXTbRtt1vQ4">2. Ap kubi sogui</button></li>
+                <li><button class="video-trigger" data-video-id="AJVFdoDua7g">3. Tuit kubi sogui</button></li>
+                <li><button class="video-trigger" data-video-id="C9TUMD8nHUM">4. Chuchum sogui</button></li>
+            </ul>
+        </div>
+
+        <!-- Cinturón Amarillo -->
+        <div class="belt-group belt-yellow">
+             <h3>Cinturón Amarillo (Hasta Sogui 6)</h3>
              <ul>
+                 <li><button class="video-trigger" data-video-id="kATpHwphRKU">1. Ap sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="YXTbRtt1vQ4">2. Ap kubi sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="AJVFdoDua7g">3. Tuit kubi sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="C9TUMD8nHUM">4. Chuchum sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="TmpEv_Zne3Y">5. Ap chuchum sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ocvoImVcyr0">6. At chuchum sogui</button></li>
+             </ul>
+         </div>
+
+        <!-- Cinturón Naranja -->
+        <div class="belt-group belt-orange">
+            <h3>Cinturón Naranja (Hasta Sogui 8)</h3>
+            <ul>
+                <li><button class="video-trigger" data-video-id="kATpHwphRKU">1. Ap sogui</button></li>
+                <li><button class="video-trigger" data-video-id="YXTbRtt1vQ4">2. Ap kubi sogui</button></li>
+                <li><button class="video-trigger" data-video-id="AJVFdoDua7g">3. Tuit kubi sogui</button></li>
+                <li><button class="video-trigger" data-video-id="C9TUMD8nHUM">4. Chuchum sogui</button></li>
+                <li><button class="video-trigger" data-video-id="TmpEv_Zne3Y">5. Ap chuchum sogui</button></li>
+                <li><button class="video-trigger" data-video-id="ocvoImVcyr0">6. At chuchum sogui</button></li>
+                <li><button class="video-trigger" data-video-id="nMYRk5ZJNVY">7. Tuit koa sogui</button></li>
+                <li><button class="video-trigger" data-video-id="bX60dd2WWmo">8. Ap koa sogui</button></li>
+            </ul>
+        </div>
+
+        <!-- Cinturón Verde -->
+        <div class="belt-group belt-green">
+            <h3>Cinturón Verde (Hasta Sogui 12)</h3>
+             <ul>
+                 <li><button class="video-trigger" data-video-id="kATpHwphRKU">1. Ap sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="YXTbRtt1vQ4">2. Ap kubi sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="AJVFdoDua7g">3. Tuit kubi sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="C9TUMD8nHUM">4. Chuchum sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="TmpEv_Zne3Y">5. Ap chuchum sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ocvoImVcyr0">6. At chuchum sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="nMYRk5ZJNVY">7. Tuit koa sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="bX60dd2WWmo">8. Ap koa sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="DtIkV-PmuT0">9. Jakdari sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="gnyB_ijpbNg">10. Moa sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_CHARYOT_SOGUI">11. Charyot sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_NARANGUI_SOGUI">12. Narangui sogui</button></li>
+             </ul>
+         </div>
+
+        <!-- Cinturón Azul -->
+        <div class="belt-group belt-blue">
+            <h3>Cinturón Azul (Hasta Sogui 14)</h3>
+            <ul>
                 <li><button class="video-trigger" data-video-id="kATpHwphRKU">1. Ap sogui</button></li>
                 <li><button class="video-trigger" data-video-id="YXTbRtt1vQ4">2. Ap kubi sogui</button></li>
                 <li><button class="video-trigger" data-video-id="AJVFdoDua7g">3. Tuit kubi sogui</button></li>
@@ -58,12 +120,41 @@
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_NARANGUI_SOGUI">12. Narangui sogui</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_PIONGUI_SOGUI">13. Piongui sogui</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_JANCHUM_CHUCHUM_SOGUI">14. Janchum chuchum sogui</button></li>
-                <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_BOM_SOGUI">15. Bom Sogui</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_OGUN_JAKDARI_SOGUI">16. Ogun jakdari sogui</button></li>
-                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_MOA_CHUCHUM_SOGUI">17. Moa chuchum sogui</button></li>
-                 <!-- Recuerda reemplazar ID_VIDEO_... con los IDs reales -->
             </ul>
-        </section>
+        </div>
+
+        <!-- Cinturón Rojo -->
+        <div class="belt-group belt-red">
+             <h3>Cinturón Rojo (Hasta Sogui 14)</h3> <!-- Se mantiene hasta 14 -->
+             <ul>
+                 <li><button class="video-trigger" data-video-id="kATpHwphRKU">1. Ap sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="YXTbRtt1vQ4">2. Ap kubi sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="AJVFdoDua7g">3. Tuit kubi sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="C9TUMD8nHUM">4. Chuchum sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="TmpEv_Zne3Y">5. Ap chuchum sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ocvoImVcyr0">6. At chuchum sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="nMYRk5ZJNVY">7. Tuit koa sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="bX60dd2WWmo">8. Ap koa sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="DtIkV-PmuT0">9. Jakdari sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="gnyB_ijpbNg">10. Moa sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_CHARYOT_SOGUI">11. Charyot sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_NARANGUI_SOGUI">12. Narangui sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_PIONGUI_SOGUI">13. Piongui sogui</button></li>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_JANCHUM_CHUCHUM_SOGUI">14. Janchum chuchum sogui</button></li>
+             </ul>
+         </div>
+
+         <!-- Cinturón Negro -->
+         <div class="belt-group belt-black"> <!-- Clase para cinturón negro -->
+              <h3>Cinturón Negro (Sogui 15-17)</h3>
+              <ul>
+                  <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_BOM_SOGUI">15. Bom Sogui</button></li>
+                  <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_OGUN_JAKDARI_SOGUI">16. Ogun jakdari sogui</button></li>
+                  <li><button class="video-trigger" data-video-id="ID_VIDEO_POS_MOA_CHUCHUM_SOGUI">17. Moa chuchum sogui</button></li>
+                  <!-- Recuerda reemplazar ID_VIDEO_... con los IDs reales -->
+              </ul>
+          </div>
+
         <!-- === FIN CONTENIDO ESPECÍFICO === -->
         <!-- =============================== -->
 
