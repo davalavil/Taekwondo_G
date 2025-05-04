@@ -90,7 +90,7 @@ body.home-page {
     /* --- Background Image Layering --- */
     background-image:
         linear-gradient(rgba(15, 52, 96, 0.85), rgba(22, 33, 62, 0.95)), /* Gradiente */
-        url('.../images/Taekwondo_00.png'); /* <-- CAMBIAR A RUTA LOCAL */
+        url('../images/Taekwondo_00.png'); /* <-- CAMBIAR A RUTA LOCAL */
 
     background-size: cover;
     background-position: center;
@@ -250,10 +250,10 @@ body.home-page {
 /* !!! REEMPLAZA LAS URLS CON LAS RUTAS A TUS IMÁGENES LOCALES !!! */
 /* Ejemplo: url('../img/poomsae-banner.jpg') o url('img/poomsae-banner.jpg') */
 
-.banner-poomsae { background-image: url('URL_IMAGEN_POOMSAE_AQUI'); }
-.banner-caidas { background-image: url('URL_IMAGEN_CAIDAS_AQUI'); }
+.banner-poomsae { background-image: url('../images/Taekwondo_01.png'); }
+.banner-caidas { background-image: url('../images/Taekwondo_01.png'); }
 .banner-posiciones { background-image: url('URL_IMAGEN_POSICIONES_AQUI'); }
-.banner-defensa { background-image: url('URL_IMAGEN_DEFENSA_AQUI'); }
+.banner-defensa { background-image: url('../images/Taekwondo_04.png'); }
 .banner-samboderian { background-image: url('URL_IMAGEN_SAMBODERIAN_AQUI'); }
 .banner-kicho { background-image: url('URL_IMAGEN_KICHO_AQUI'); }
 .banner-glosario { background-image: url('URL_IMAGEN_GLOSARIO_AQUI'); background-color: #343a40; }
