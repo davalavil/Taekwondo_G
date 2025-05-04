@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía Taekwondo - Caídas por Cinturón</title> <!-- TÍTULO ACTUALIZADO -->
+    <title>Guía Taekwondo - Caídas por Cinturón</title>
     <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,12 @@
 
     <h1>Guía Completa de Taekwondo</h1>
 
-    <!-- Barra de Navegación -->
+    <!-- Barra de Navegación ACTUALIZADA -->
     <nav>
-        <a href="index.html">Poomsae</a>
+        <a href="index.html">Inicio</a> <!-- NUEVO enlace a la portada -->
+        <a href="poomsae.html">Poomsae</a> <!-- Apunta a poomsae.html -->
         <a href="caidas.html" class="active">Caídas</a> <!-- Clase activa aquí -->
-        <a href="posiciones.html">Posiciones sogui</a>
+        <a href="posiciones.html">Posiciones (Sogui)</a> <!-- Texto actualizado -->
         <a href="defensa.html">Defensa Personal</a>
         <a href="samboderian.html">Samboderian</a>
         <a href="kicho.html">Kicho</a>
@@ -27,12 +28,9 @@
     </nav>
 
     <!-- Contenedor para mostrar el vídeo (Modal) -->
-    <!-- Incluido porque esta página tiene botones de vídeo -->
     <div id="video-player-container" class="hidden">
         <button id="close-video">X</button>
-        <div id="video-player">
-            <!-- El iframe de YouTube se insertará aquí por JavaScript -->
-        </div>
+        <div id="video-player"></div>
     </div>
 
     <!-- Contenedor principal para el contenido -->
@@ -44,7 +42,6 @@
         <!-- Cinturón Blanco -->
         <div class="belt-group belt-white">
             <h3>Cinturón Blanco (Hasta Caída 4)</h3>
-             <!-- <h4>Caídas</h4> opcional -->
             <ul>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL">1. Lateral</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_IZQ">2. Voltereta pie izquierdo recogido</button></li>
@@ -56,7 +53,6 @@
         <!-- Cinturón Amarillo -->
         <div class="belt-group belt-yellow">
             <h3>Cinturón Amarillo (Hasta Caída 5)</h3>
-            <!-- <h4>Caídas</h4> opcional -->
             <ul>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL">1. Lateral</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_IZQ">2. Voltereta pie izquierdo recogido</button></li>
@@ -68,8 +64,7 @@
 
         <!-- Cinturón Naranja -->
         <div class="belt-group belt-orange">
-             <h3>Cinturón Naranja (Hasta Caída 5)</h3> <!-- Mismo nivel que Amarillo -->
-             <!-- <h4>Caídas</h4> opcional -->
+             <h3>Cinturón Naranja (Hasta Caída 5)</h3>
              <ul>
                  <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL">1. Lateral</button></li>
                  <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_IZQ">2. Voltereta pie izquierdo recogido</button></li>
@@ -82,7 +77,6 @@
         <!-- Cinturón Verde -->
         <div class="belt-group belt-green">
             <h3>Cinturón Verde (Hasta Caída 6)</h3>
-            <!-- <h4>Caídas</h4> opcional -->
             <ul>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL">1. Lateral</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_IZQ">2. Voltereta pie izquierdo recogido</button></li>
@@ -96,7 +90,6 @@
         <!-- Cinturón Azul -->
         <div class="belt-group belt-blue">
             <h3>Cinturón Azul (Hasta Caída 7)</h3>
-            <!-- <h4>Caídas</h4> opcional -->
             <ul>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL">1. Lateral</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_IZQ">2. Voltereta pie izquierdo recogido</button></li>
@@ -111,7 +104,6 @@
         <!-- Cinturón Rojo -->
         <div class="belt-group belt-red">
             <h3>Cinturón Rojo (Hasta Caída 8)</h3>
-            <!-- <h4>Caídas</h4> opcional -->
             <ul>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_LATERAL">1. Lateral</button></li>
                 <li><button class="video-trigger" data-video-id="ID_VIDEO_CAIDA_VOLTERETA_IZQ">2. Voltereta pie izquierdo recogido</button></li>
@@ -131,7 +123,6 @@
     </div> <!-- Fin de belt-container -->
 
     <!-- Link JavaScript -->
-    <!-- Incluido porque esta página tiene botones de vídeo -->
     <script src="js/script.js"></script>
 </body>
 </html>
