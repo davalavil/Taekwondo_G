@@ -88,7 +88,7 @@ body.home-page {
     /* Ajusta la opacidad del gradiente (ej. 0.85, 0.95) para controlar cuánta imagen se ve */
     background-image:
         linear-gradient(rgba(15, 52, 96, 0.85), rgba(22, 33, 62, 0.95)), /* Gradiente azulado oscuro semi-transparente */
-        url('images/Taekwondo_00.png'); /* <-- CAMBIA ESTO a tu ruta local, ej: url('../img/taekwondo-bg.jpg') */
+        url('../images/Taekwondo_00.png'); /* <-- CAMBIA ESTO a tu ruta local, ej: url('../img/taekwondo-bg.jpg') */
 
     background-size: cover;         /* Cubrir todo el área */
     background-position: center;    /* Centrar la imagen */
